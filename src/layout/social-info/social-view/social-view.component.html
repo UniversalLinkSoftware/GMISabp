@@ -1,0 +1,280 @@
+<h1>This is the view component</h1>
+<div *ngFor="let socials of social">
+    <div *ngFor="let farms of farm">
+        <div *ngFor="let ethnics of ethnic">
+            <div *ngFor="let lands of land">
+  
+  
+  <h3>
+      
+    <a [routerLink]="['social-edit/',socials.id]">
+      
+
+      <button class="btn btn-info ml-2 mr-4" type="edit">Edit</button></a>
+      <button class="btn btn-info ml-2 mr-4" (click)="captureScreen()" >Print</button>
+      
+    </h3>
+
+
+
+<br>
+
+<div id="a">
+<div class="jumbotron" >
+  <form>
+    <fieldset>
+        <div class="form-group row">
+            <div class="col-sm-2" >
+              <label for="inputPassword" class="col-sm-auto col-form-label">No. of household:</label>
+            </div>
+            <div class="col-sm-2">
+              {{socials.numberOfHousehold}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto">Women headed household:</label>
+            </div>
+            <div class="col-sm-2" >
+                {{socials.womenInHousehold}}
+            </div>
+            <div class="col-sm-2">
+              <label for="inputPassword" class="col-sm-auto col-form-label">Year of survey:</label>
+            </div>
+            <div class="col-sm-2">
+                {{socials.numberOfHousehold}}
+            </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm-2" >
+                <label for="inputPassword" class="col-sm-auto col-form-label">Female:</label>
+              </div>
+              <div class="col-sm-2">
+                {{socials.female}}
+              </div>
+              <div class="col-sm-2">
+              <label for="inputPassword" class="col-sm-auto">Male:</label>
+              </div>
+              <div class="col-sm-2" >
+                  {{socials.male}}
+              </div>
+              <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto col-form-label">Total Population:</label>
+              </div>
+              <div class="col-sm-2">
+                  {{socials.totalPopulation}}
+              </div>
+            </div> 
+
+            <div class="form-group row">
+                <div class="col-sm-2" >
+                  <label for="inputPassword" class="col-sm-auto col-form-label">Major Source Of income:</label>
+                </div>
+                <div class="col-sm-2">
+                  {{socials.annualIncomePerFamily}}
+                </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2" >
+                      <label for="inputPassword" class="col-sm-auto col-form-label">Annual income per family:</label>
+                    </div>
+                    <div class="col-sm-2">
+                      {{socials.annualIncomePerFamily}}
+                    </div>
+                    <div class="col-sm-2">
+                    <label for="inputPassword" class="col-sm-auto">From Agriculture:</label>
+                    </div>
+                    <div class="col-sm-2" >
+                        {{socials.fromAgriculture}}
+                    </div>
+                    <div class="col-sm-2">
+                      <label for="inputPassword" class="col-sm-auto col-form-label">From other source:
+                        </label>
+                    </div>
+                    <div class="col-sm-2">
+                        {{socials.fromOtherSource}}
+                    </div>
+                  </div> 
+
+                  
+                  <div class="form-group row">
+                      <div class="col-sm-2" >
+                        <label for="inputPassword" class="col-sm-auto col-form-label">Literacy rate:</label>
+                      </div>
+                      <div class="col-sm-2">
+                        {{socials.literacyRate}}
+                      </div>
+                      <div class="col-sm-2">
+                      <label for="inputPassword" class="col-sm-auto">Female:</label>
+                      </div>
+                      <div class="col-sm-2" >
+                          {{socials.literacyFemale}}
+                      </div>
+                      <div class="col-sm-2">
+                        <label for="inputPassword" class="col-sm-auto col-form-label">Male:</label>
+                      </div>
+                      <div class="col-sm-2">
+                          {{socials.literacyMale}}
+                      </div>
+                    </div> 
+
+                    <br>
+                              <div class="card mb-3">
+                                <div class="card-header">Ethnic groups:</div>
+                                            <div class="card-body table-responsive">
+                                              <table class="table table-hover table table-bordered table-striped" >
+                                                <thead>
+                                                  <tr>
+                                                    <th>Name</th>
+                                                    <th>Total number</th>
+                                                    <th>Percentage</th>
+                                                    
+                                                  </tr>
+                                                </thead>
+                                                <tbody >
+                                                  <tr >
+                                                    <td>
+                                                        {{ethnics.name}}
+                                                    </td>
+                                                    <td>
+                                                        {{ethnics.totalNumber}}
+                                                    </td>
+                                                    <td>
+                                                        {{ethnics.percentage}}
+                                                  </td>
+                              
+                                                    
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                                  </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="col-sm-2" >
+                                                  <label for="inputPassword" class="col-sm-auto col-form-label">Annual population migration in:</label>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                  {{socials.populationMigrationIn}}
+                                                </div>
+                                                <div class="col-sm-2">
+                                                <label for="inputPassword" class="col-sm-auto">Annual population migration out:</label>
+                                                </div>
+                                                <div class="col-sm-2" >
+                                                    {{socials.populationMigrationOut}}
+                                                </div>
+                                                </div>
+
+                                                <div class="card mb-3">
+                                                    <div class="card-header">Land tenure (household no's):</div>
+                                                                <div class="card-body table-responsive">
+                                                                        <table class="table table-hover table table-bordered table-striped">
+                                                                          <thead>
+                                                                            <tr>
+                                                                              <th></th>
+                                                                              <th>Total </th>
+                                                                              <th>Percentage</th>
+                                                                            </tr>
+                                                                          </thead>
+                                                                          <tbody>
+                                                                            <tr>
+                                                                              <td><label>Land oweners</label></td>
+                                                                              <td>{{lands.landOwners}}</td>
+                                                                              <td>{{lands.landOwners}}</td>
+                                                                              
+                                                                            </tr>
+                                                                            <tr>
+                
+                                                                                    <td><label >Tenants</label></td>
+                                                                              <td>{{lands.tenants}}</td>
+
+                                                                              <td>{{lands.tenants}}</td>
+                
+                                                                            </tr>
+                                                                            <tr>
+                
+                                                                                    <td><label >Oweners with tenants</label></td>
+                                                                              <td>{{lands.ownerWithTenants}}</td>
+                                                                              <td>{{lands.ownerWithTenants}}</td>
+                                                                            </tr>
+                                                                            <tr>
+                
+                                                                                    <td><label >Landless</label></td>
+                                                                                    <td>{{lands.landless}}</td>
+                                                                                    <td>{{lands.landless}}</td>
+                                                                                  </tr>
+                                                                                  <tr>
+                
+                                                                                        <td><label >Total</label></td>
+                                                                                        <td>{{lands.total}}</td>
+                                                                                        <td>{{lands.total}}</td>
+                                                                                      </tr>
+                
+                                                                          </tbody>
+                                                                        </table>
+                                                                      </div>
+                                                        </div>
+                                                <br>
+                
+                                                <div class="card mb-3">
+                                                  <div class="card-header">Farm size (household no's):</div>
+                                                                <div class="card-body table-responsive">
+                                                                        <table class="table table-hover table table-bordered table-striped">
+                                                                          <thead>
+                                                                            <tr>
+                                                                              <th>Category</th>
+                                                                              <th>text</th>
+                                                                              <th>Percentage</th>
+                                                                            </tr>
+                                                                          </thead>
+                                                                          <tbody>
+                                                                            <tr>
+                                                                              <td><label>small(less then 0.5 hectare)</label></td>
+                                                                              <td>{{farms.small}}</td>
+                                                                              <td>{{farms.small}}</td>
+                                                                            </tr>
+                                                                            <tr>
+                
+                                                                                    <td><label >medium(0.5-1.0 hectare)</label></td>
+                                                                              <td>{{farms.medium}}</td>
+                                                                              <td>{{farms.medium}}</td>
+                
+                                                                            </tr>
+                                                                            <tr>
+                
+                                                                                    <td><label >large(1.0-1.5 hectare)</label></td>
+                                                                              <td>{{farms.large}}</td>
+                                                                              <td>{{farms.large}}</td>
+                                                                            </tr>
+                                                                            <tr>
+                
+                                                                                    <td><label >very large(more then 1.5 hectare)</label></td>
+                                                                                    <td>{{farms.veryLarge}}</td>
+                                                                                    <td>{{farms.veryLarge}}</td>
+                                                                                  </tr>
+                                                                                  <tr>
+                
+                                                                                        <td><label >Total</label></td>
+                                                                                        <td>{{farms.total}}</td>
+                                                                                        <td>{{farms.total}}</td>
+                                                                                      </tr>
+                
+                                                                          </tbody>
+                                                                        </table>
+                                                                      </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2" >
+                                                              <label for="inputPassword" class="col-sm-auto col-form-label">Annual food sufficiency:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                              {{socials.annualfoodSufficiency}}
+                                                            </div>
+                                                            </div>
+    </fieldset>
+ </form></div></div></div></div></div> 
+
+
+</div>
+

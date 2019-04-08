@@ -1,0 +1,280 @@
+<div *ngFor="let economics of economic">
+    <h3>
+        <a [routerLink]="['economic-edit/', economics.id]">
+            <button class="btn btn-info ml-2 mr-4" type="edit">Edit</button>
+            <button class="btn btn-info ml-2 mr-4" (click)="captureScreen()" >Print</button>
+        </a>
+    </h3>
+
+
+    <h1>This is the view component</h1>
+    <div id='a'>
+    <div id="home">
+        <div class="jumbotron">
+
+
+            <!--start of Economic information-->
+            <fieldset>
+                <legend class="col-md-3 col-form-label">Economic information</legend>
+                <fieldset>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto">Total Project Cost</label></div>
+                        <div class="col-sm-2">
+                            {{economics.totalProjectCost}}
+
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">Nrs</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">B/C 1:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            {{economics.bcRatio1}}
+
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">(eg:2,3)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label ">Cositng year:</label>
+                        </div>
+                        <div class="col-sm-2">
+
+                            {{economics.costingYear}}
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">AD</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">Discount rate 1:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            {{economics.discountRate1}}
+
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">%</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label ">Eirr:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            {{economics.eirr}}
+
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">%</label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">B/C 2:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            {{economics.bcRatio2}}
+
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">(eg:2,3)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">Discount rate 2:</label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            {{economics.discountRate2}}
+
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">%</label>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <br>
+                    <br>
+                    <fieldset>
+                        <div class="card mb-3">
+                            <!-- <legend class="col-md-3 col-form-label"><h6>Economic Information Table</h6></legend> -->
+                            <legend class="col-md-3 col-form-label">
+                                <h6><span class="badge badge-secondary">Economic Information Table</span></h6>
+                            </legend>
+                            <!-- <div class="card-header">Economic Information Table</div> -->
+                            <div class="card-body table-responsive">
+                                <table class="table table-hover table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Total Project Cost</th>
+                                            <th>B/C 1</th>
+                                            <th>Cositng year</th>
+                                            <th>Discount rate 1</th>
+                                            <th>Eirr</th>
+                                            <th>B/C 2</th>
+                                            <th>Discount rate 2</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>{{economics.totalProjectCost}}</td>
+                                            <td>{{economics.bcRatio1}}</td>
+                                            <td>{{economics.costingYear}}</td>
+                                            <td>{{economics.discountRate1}}</td>
+                                            <td>{{economics.eirr}}</td>
+                                            <td>{{economics.bcRatio2}}</td>
+                                            <td>{{economics.discountRate2}}</td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        <br>
+                        <!-- <table sclass="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Project cost</th>
+          <th scope="col">Costing year</th>
+          <th scope="col">Eirr(%)</th>
+          <th scope="col">B/C 1</th>
+          <th scope="col">Discountrate 1(%)</th>
+          <th scope="col">B/C 2</th>
+          <th scope="col">Discount rate 2(%)</th>
+        </tr>
+      </thead>
+         <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+    </table> -->
+                        <br>
+                    </fieldset>
+                    <br>

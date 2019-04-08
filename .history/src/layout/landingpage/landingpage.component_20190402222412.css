@@ -1,0 +1,34 @@
+#header{
+    margin :0px;
+    height: 200px;
+    width:100%;
+    position: relative;
+   
+}
+@media screen and (max-width: 992px) {
+    #header{
+        display: none;
+    }
+}
+
+.img-responsive{
+    height: 100%;
+    width: 100%;
+}
+
+.img-2{
+    width: 130px;  
+    height: 135px; 
+    position: absolute;
+    top: 15%;
+    left: 87%;
+    
+    
+}
+
+    .navbar {
+        height: 56px;
+        position: relative;
+        background-color: #0d385b;
+        
+}

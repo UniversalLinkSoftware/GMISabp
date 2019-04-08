@@ -1,0 +1,271 @@
+<div class="jumbotron">
+    <form [formGroup]="pageForm">
+  <fieldset>
+    <div class="form-group row">
+      <div class="col-sm-2">
+       <label for="inputPassword" class="col-sm-auto col-form-label">Province:</label>
+      </div>
+      <div class="col-sm-2">
+        <select class="form-control" formControlName="province" >
+          <span *ngIf="!pageForm.get('province').valid && pageForm.get('province').touched"  class="text-danger">
+            <!-- <span *ngIf="pageForm.get('province').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+            <span *ngIf="pageForm.get('province').errors['required']"><small>This field is required!</small></span>
+          </span> 
+            <option>option 1</option>
+            <option>option 1</option>
+            <option>option 1</option>
+        </select>
+      </div>
+      <div class="col-sm-2">
+        <label for="inputPassword"  class="ml-2 col-form-label"></label>
+      </div>
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Local body type:</label>
+      </div>
+      <div class="col-sm-2">
+        <select class="form-control" formControlName="localBodyType" >
+            <span *ngIf="!pageForm.get('localBodyType').valid && pageForm.get('localBodyType').touched"  class="text-danger">
+              <!-- <span *ngIf="pageForm.get('localBodyType').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+              <span *ngIf="pageForm.get('localBodyType').errors['required']"><small>This field is required!</small></span>
+            </span> 
+            <option>option 1</option>
+            <option>option 1</option>
+            <option>option 1</option>
+        </select>
+      </div>
+      <div class="col-sm-2">
+       <label for="inputPassword" class="col-form-label"></label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">District:</label>
+      </div>
+      <div class="col-sm-2">
+        <select class="form-control" formControlName="district" >
+            <span *ngIf="!pageForm.get('district').valid && pageForm.get('district').touched"  class="text-danger">
+              <!-- <span *ngIf="pageForm.get('district').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+              <span *ngIf="pageForm.get('district').errors['required']"><small>This field is required!</small></span>
+            </span> 
+            <option>option 1</option>
+            <option>option 1</option>
+            <option>option 1</option>
+        </select>
+      </div>
+      <div class="col-sm-2">
+        <label for="inputPassword"  class="ml-2 col-form-label"></label>
+      </div>
+        <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Ward:</label>
+        </div>
+      <div class="col-sm-2">
+          <select class="form-control" formControlName="ward" >
+              <span *ngIf="!pageForm.get('ward').valid && pageForm.get('ward').touched"  class="text-danger">
+                <!-- <span *ngIf="pageForm.get('Ward').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+                <span *ngIf="pageForm.get('ward').errors['required']"><small>This field is required!</small></span>
+              </span> 
+              <option>option 1</option>
+              <option>option 1</option>
+              <option>option 1</option>
+          </select>
+      </div>
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-form-label"></label>
+      </div>
+    </div>
+    <br>
+    <div class="btn-toolbar">
+      <div>
+        <button class="btn btn-success ml-2 mr-4" type="button">Add</button>
+        <button class="btn btn-danger " type="button" >Reset</button>
+      </div>
+    </div>
+    <br>
+    <h4>Province, District, Local body type, Ward No:</h4>
+      <br>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Province</th>
+            <th scope="col">District</th>
+            <th scope="col">Local body type</th>
+            <th scope="col">Ward no</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Ecological region:</label>
+      </div>
+      <div class="col-sm-2">
+        <select class="form-control" formControlName="ecologicalRegion" >
+            <span *ngIf="!pageForm.get('ecologicalRegion').valid && pageForm.get('ecologicalRegion').touched"  class="text-danger">
+              <!-- <span *ngIf="pageForm.get('ecologicalRegion').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+              <span *ngIf="pageForm.get('ecologicalRegion').errors['required']"><small>This field is required!</small></span>
+            </span>
+          <option>Mountain</option>
+          <option>Hill</option>
+          <option>Terai</option>
+        </select>
+      </div>
+      <div class="col-sm-2">
+        <label for="inputPassword"  class="ml-2 col-form-label"></label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Neareast Road Head:</label>
+      </div>
+        <div class="col-sm-10">
+          <textarea class="form-control"cols="60"  rows="3" id="comment" formControlName="nearestRoad" >
+              <span *ngIf="!pageForm.get('nearestRoad').valid && pageForm.get('ard').touched"  class="text-danger">
+                <!-- <span *ngIf="pageForm.get('nearestRoad').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+                <span *ngIf="pageForm.get('nearestRoad').errors['required']"><small>This field is required!</small></span>
+              </span>
+          </textarea>
+        </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Distance:</label>
+      </div>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" formControlName="distance" >
+        <span *ngIf="!pageForm.get('distance').valid && pageForm.get('distance').touched"  class="text-danger">
+          <span *ngIf="pageForm.get('distance').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+          <span *ngIf="pageForm.get('distance').errors['required']"><small>This field is required!</small></span>
+        </span>
+      </div>
+      <div class="col-sm-2">
+        <label for="inputPassword"  class="ml-2 col-form-label">Km</label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Neareast Airpot:</label>
+      </div>
+      <div class="col-sm-10">
+        <textarea class="form-control"cols="60"  rows="3" id="comment" formControlName="nearestAirport" >
+            <span *ngIf="!pageForm.get('nearestAirport').valid && pageForm.get('ard').touched"  class="text-danger">
+              <!-- <span *ngIf="pageForm.get('nearestAirport').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+              <span *ngIf="pageForm.get('nearestAirport').errors['required']"><small>This field is required!</small></span>
+            </span>
+
+        </textarea>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Distance:</label>
+      </div>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" formControlName="airportDistance" >
+        <span *ngIf="!pageForm.get('airportDistance').valid && pageForm.get('airportDistance').touched"  class="text-danger">
+          <span *ngIf="pageForm.get('airportDistance').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+          <span *ngIf="pageForm.get('airportDistance').errors['required']"><small>This field is required!</small></span>
+        </span>
+      </div>
+      <div class="col-sm-2">
+        <label for="inputPassword"  class="ml-2 col-form-label">Km</label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Neareast Market:</label>
+      </div>
+      <div class="col-sm-10">
+        <textarea class="form-control"cols="60"  rows="3" id="comment" formControlName="nearestMarket" >
+            <span *ngIf="!pageForm.get('nearestMarket').valid && pageForm.get('ard').touched"  class="text-danger">
+              <!-- <span *ngIf="pageForm.get('nearestMarket').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+              <span *ngIf="pageForm.get('nearestMarket').errors['required']"><small>This field is required!</small></span>
+            </span>
+
+        </textarea>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Distance:</label>
+      </div>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" formControlName="marketDistance" >
+        <span *ngIf="!pageForm.get('marketDistance').valid && pageForm.get('marketDistance').touched"  class="text-danger">
+          <span *ngIf="pageForm.get('marketDistance').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+          <span *ngIf="pageForm.get('marketDistance').errors['required']"><small>This field is required!</small></span>
+        </span>
+
+      </div>
+      <div class="col-sm-2">
+        <label for="inputPassword"  class="ml-2 col-form-label">Km</label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Major River Basin::</label>
+      </div>
+      <div class="col-sm-2">
+        <select class="form-control" formControlName="majorRiverBasin" >
+            <span *ngIf="!pageForm.get('majorRiverBasin').valid && pageForm.get('majorRiverBasin').touched"  class="text-danger">
+              <!-- <span *ngIf="pageForm.get('majorRiverBasin').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+              <span *ngIf="pageForm.get('majorRiverBasin').errors['required']"><small>This field is required!</small></span>
+            </span>
+          <option>Mountain</option>
+          <option>Hill</option>
+          <option>Terai</option>
+
+        </select>
+      </div>
+      <div>
+        <button (click)="openModal()">Map</button>
+        </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Local River Basin:</label>
+      </div>
+      <div class="col-sm-10">
+        <textarea class="form-control"cols="60"  rows="3" id="comment" formControlName="localRiverBasin" >
+            <span *ngIf="!pageForm.get('localRiverBasin').valid && pageForm.get('localRiverBasin').touched"  class="text-danger">
+              <!-- <span *ngIf="pageForm.get('localRiverBasin').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+              <span *ngIf="pageForm.get('localRiverBasin').errors['required']"><small>This field is required!</small></span>
+            </span>
+
+
+        </textarea>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">River Source:</label>
+      </div>
+      <div class="col-sm-10">
+      <textarea class="form-control" cols="60"  rows="3" id="comment" formControlName="riverSource" >
+          <span *ngIf="!pageForm.get('riverSource').valid && pageForm.get('riverSource').touched"  class="text-danger">
+            <!-- <span *ngIf="pageForm.get('riverSource').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+            <span *ngIf="pageForm.get('riverSource').errors['required']"><small>This field is required!</small></span>
+          </span>
+
+        </textarea>
+      </div>
+    </div>
+    <div class="btn-toolbar">
+      <div>
+        <button class="btn btn-success ml-2 mr-4" type="save" >Save</button>
+        <button class="btn btn-primary ml-2 mr-4" type="submit" >Submit</button>
+        <button class="btn ml-2 mr-4" type="fetch">Fetch</button>
+        <button class="btn btn-info ml-2 mr-4" type="edit">Edit</button>
+        <button class="btn btn-warning ml-2 mr-4" type="reset" >Reset</button>
+        <button class="btn btn-danger ml-2 mr-4" type="cancel" >Cancel</button>
+        </div>
+      </div>
+    <br>
+    <br>
+  </fieldset>
+  </form>
+</div>

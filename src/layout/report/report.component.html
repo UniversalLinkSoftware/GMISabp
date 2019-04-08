@@ -1,0 +1,345 @@
+<div id='print'>
+<div *ngFor="let groundwaters of groundwater">
+<div class="jumbotron">
+  <h3 class="text-center">Salient features</h3>
+  <hr>
+      <fieldset>
+              <legend class="col-md-4 col-form-label">Sub Project:</legend>
+  <div class="form-group row">
+          <div class="col-sm-6">
+                  <label for="inputPassword" class="col-sm-auto col-form-label">Name:</label>
+          </div>
+          <div class="col-sm-6">
+            <label class="col-sm-auto col-form-label">{{groundwaters.tubewellNo}}</label>
+          </div>
+  </div>
+  <div class="form-group row">
+          <div class="col-sm-6">
+                  <label for="inputPassword" class="col-sm-auto col-form-label">Type:</label>
+          </div>
+          <div class="col-sm-6">
+            <label class="col-sm-auto col-form-label">{{groundwaters.location}}</label>
+          </div>
+  </div>
+  </fieldset>
+  <hr>
+  <fieldset>
+          <legend class="col-md-4 col-form-label">Location:</legend>
+<div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">VDC (W.No.):</label>
+      </div>
+      <div class="col-sm-6">
+        <label class="col-sm-auto col-form-label">{{groundwaters.aquiferMaterial}}</label>
+      </div>
+</div>
+<div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">District:</label>
+      </div>
+      <div class="col-sm-6">
+        <label class="col-sm-auto col-form-label">{{groundwaters.latitude}}</label>
+      </div>
+</div>
+<div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">Province:</label>
+      </div>
+      <div class="col-sm-6">
+          <label class="col-sm-auto col-form-label">{{groundwaters.totalDrillDepth}}</label>
+      </div>
+</div>
+<div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">Neareast Road Head:</label>
+      </div>
+      <div class="col-sm-6">
+          <label class="col-sm-auto col-form-label">{{groundwaters.housingLength}}</label>
+      </div>
+</div>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">People:</legend>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Household:</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.elevation}}</label>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Population:</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.screenLength}}</label>
+  </div>
+</div>
+<div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">Ethnic Groups(HH):</label>
+      </div>
+      <div class="col-sm-6">
+          <label class="col-sm-auto col-form-label">{{groundwaters.typeOfTubewell}}</label>
+      </div>
+  </div>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Canak System:</legend>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Main Canal Length(Km):</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.typeOfScreen}}</label>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Branch Canal (Name/No.):</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.tubewellHousingPipeSize}}</label>
+  </div>
+</div>
+<div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">Total BranchCanal Length (Km):</label>
+      </div>
+      <div class="col-sm-6">
+          <label class="col-sm-auto col-form-label">{{groundwaters.pumpingDischarge}}</label>
+      </div>
+  </div>
+  <div class="form-group row">
+          <div class="col-sm-6">
+                  <label for="inputPassword" class="col-sm-auto col-form-label">Main Canal Design Discharge:</label>
+          </div>
+          <div class="col-sm-6">
+              <label class="col-sm-auto col-form-label">{{groundwaters.tubewellScreenAndCasingPipeSize}}</label>
+          </div>
+      </div>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Water Source:</legend>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Catchment Area (Km<sup>2</sup>):</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.drawdown}}</label>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Measured Flow (lps)/Date:</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.staticWaterLevel}}</label>
+  </div>
+</div>
+<div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">High Flood Discharge (cumec):</label>
+      </div>
+      <div class="col-sm-6">
+          <label class="col-sm-auto col-form-label">{{groundwaters.aquiferStorageCoefficient}}</label>
+      </div>
+  </div>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Command Area:</legend>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Gross Command Area (Ha):</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.aquiferTransmissivity}}</label>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Net Command Area (Ha):</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.brandOfPump}}</label>
+  </div>
+</div>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Canal Structures:</legend>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Side Intake (No.):</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.sizeOfPumpHouse}}</label>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Superpassage (Nos.):</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.power}}</label>
+  </div>
+</div>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Agriculture:</legend>
+      <br>
+      <fieldset>
+              <legend class="col-md-4 col-form-label">Existing:</legend>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Cropping Pattern:</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.heightOfOverheadTank}}</label>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Cropping Intensity (%):</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.head}}</label>
+  </div>
+</div>
+<div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">Crop Coverage:</label>
+      </div>
+      <div class="col-sm-6">
+          <label class="col-sm-auto col-form-label">{{groundwaters.volumeOfOverheadTank}}</label>
+      </div>
+  </div>
+  <div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">Crop Yields (Ton/Ha):</label>
+      </div>
+      <div class="col-sm-6">
+          <label class="col-sm-auto col-form-label">{{groundwaters.pumpDischarge}}</label>
+      </div>
+  </div>
+</fieldset>
+<br>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Proposed:</legend>
+<div class="form-group row">
+<div class="col-sm-6">
+  <label for="inputPassword" class="col-sm-auto col-form-label">Cropping Pattern:</label>
+</div>
+<div class="col-sm-6">
+<label class="col-sm-auto col-form-label">{{groundwaters.efficiencyOfMotor}}</label>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-6">
+  <label for="inputPassword" class="col-sm-auto col-form-label">Cropping Intensity (%):</label>
+</div>
+<div class="col-sm-6">
+<label class="col-sm-auto col-form-label">{{groundwaters.efficiencyOfPump}}</label>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-6">
+      <label for="inputPassword" class="col-sm-auto col-form-label">Crop Coverage:</label>
+</div>
+<div class="col-sm-6">
+  <label class="col-sm-auto col-form-label">{{groundwaters.pumpLoweringDepth}}</label>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-6">
+      <label for="inputPassword" class="col-sm-auto col-form-label">Crop Yields (Ton/Ha):</label>
+</div>
+<div class="col-sm-6">
+  <label class="col-sm-auto col-form-label">{{groundwaters.columnPipeSize}}</label>
+</div>
+</div>
+</fieldset>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Inatitutional:</legend>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">WUA, Comittee:</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.columnType}}</label>
+  </div>
+</div>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Cost Analysis:</legend>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Total Cost:</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.lengthOf11kvHTTransmissionLine}}</label>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">DOI Share:</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.transformerCapacity}}</label>
+  </div>
+</div>
+<div class="form-group row">
+      <div class="col-sm-6">
+              <label for="inputPassword" class="col-sm-auto col-form-label">WUA Share:</label>
+      </div>
+      <div class="col-sm-6">
+          <label class="col-sm-auto col-form-label">{{groundwaters.transmissionLine}}</label>
+      </div>
+  </div>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Economic Analysis:</legend>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">EIRR:</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.controlPanel}}</label>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Benefit Cost Ratio:</label>
+  </div>
+  <div class="col-sm-6">
+      <label class="col-sm-auto col-form-label">{{groundwaters.noOfPoles}}</label>
+  </div>
+</div>
+</fieldset>
+<hr>
+<fieldset>
+      <legend class="col-md-4 col-form-label">Recomendation:</legend>
+<div class="form-group row">
+  <div class="col-sm-12">
+          <textarea class="form-control" rows="3"></textarea>
+  </div>
+</div>
+</fieldset>
+<hr>
+
+</div>
+
+</div>
+
+</div>
+<button class="btn btn-info ml-2 mr-4" (click)="captureScreen()" >Print</button>

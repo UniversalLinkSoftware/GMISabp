@@ -1,0 +1,812 @@
+<form [formGroup]="page6Form" (ngSubmit)='onSubmit()'>
+  <div class="jumbotron">
+    <fieldset>
+      <br>
+      <div class="form-group row">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Tubewell no:</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="tubewellNo" >
+            <span *ngIf="!page6Form.get('tubewellNo').valid && page6Form.get('tubewellNo').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('tubewellNo').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('tubewellNo').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+      </div>
+      <br>
+      <fieldset>
+          <legend class="col-md-2 col-form-label">Tubewell Information</legend>
+          <div class="form-group row">
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Location:</label>
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" formControlName="Location" >
+              <span *ngIf="!page6Form.get('Location').valid && page6Form.get('Location').touched"  class="text-danger">
+                <!-- <span *ngIf="page6Form.get('Location').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+                <span *ngIf="page6Form.get('Location').errors['required']"><small>This field is required!</small></span>
+              </span>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label"></label>
+            </div>
+
+            
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Aquifer material:</label>
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" formControlName="aquiferMaterial" >
+              <span *ngIf="!page6Form.get('aquiferMaterial').valid && page6Form.get('aquiferMaterial').touched"  class="text-danger">
+                <!-- <span *ngIf="page6Form.get('aquiferMaterial').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+                <span *ngIf="page6Form.get('aquiferMaterial').errors['required']"><small>This field is required!</small></span>
+              </span>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-form-label"></label>
+            </div>
+         </div>
+
+         <div class="form-group row">
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Latitude:</label>
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" formControlName="Latitude" >
+              <span *ngIf="!page6Form.get('Latitude').valid && page6Form.get('Latitude').touched"  class="text-danger">
+                <span *ngIf="page6Form.get('Latitude').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                <span *ngIf="page6Form.get('Latitude').errors['required']"><small>This field is required!</small></span>
+              </span>
+            </div>
+
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="col-form-label"><small>decimal degree</small></label>
+            </div>
+
+            
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Total drill depth:</label>
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" formControlName="totalDrillDepth" >
+              <span *ngIf="!page6Form.get('totalDrillDepth').valid && page6Form.get('totalDrillDepth').touched"  class="text-danger">
+                <span *ngIf="page6Form.get('totalDrillDepth').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                <span *ngIf="page6Form.get('totalDrillDepth').errors['required']"><small>This field is required!</small></span>
+              </span>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="ml-2 col-form-label">m</label>
+            </div>
+         </div>
+  
+         <div class="form-group row">
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Longtitude:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="Longtitude" >
+            <span *ngIf="!page6Form.get('Longtitude').valid && page6Form.get('Longtitude').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('Longtitude').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('Longtitude').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+
+          <div class="col-sm-2">
+          <label for="inputPassword"  class="col-form-label"><small>decimal degree</small></label>
+          </div>
+
+          
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Housing length:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="housingLength" >
+            <span *ngIf="!page6Form.get('housingLength').valid && page6Form.get('housingLength').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('housingLength').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('housingLength').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+          <div class="col-sm-2">
+          <label for="inputPassword" class="ml-2 col-form-label">m</label>
+          </div>
+       </div>
+
+       <div class="form-group row">
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Elevation:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="Elevation" >
+          <span *ngIf="!page6Form.get('Elevation').valid && page6Form.get('Elevation').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('Elevation').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('Elevation').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+
+        <div class="col-sm-2">
+        <label for="inputPassword"  class="col-form-label">masl</label>
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Screen length:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="screenLength" >
+          <span *ngIf="!page6Form.get('screenLength').valid && page6Form.get('screenLength').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('screenLength').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('screenLength').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+        <div class="col-sm-2">
+        <label for="inputPassword" class="ml-2 col-form-label">m</label>
+        </div>
+     </div>
+
+     <div class="form-group row">
+      <div class="col-sm-2">
+      <label for="inputPassword" class="col-sm-auto col-form-label">Type of tubewells::</label>
+      </div>
+      <div class="col-sm-2">
+        <select class="form-control" >
+          <option>deep tubewell</option>
+          <option>power drill shallow tubewell</option>
+          <option>shallow tubewell</option> 
+          <option>dug well</option> 
+          </select>
+      </div>
+
+      <div class="col-sm-2">
+      <label for="inputPassword"  class="col-form-label"></label>
+      </div>
+
+      
+      <div class="col-sm-2">
+      <label for="inputPassword" class="col-sm-auto col-form-label">Type of screen:</label>
+      </div>
+      <div class="col-sm-2">
+        <select class="form-control" >
+          <option>Jonnon and Jonson</option>
+          <option>L.C.G Jonson </option>
+          <option>slotted</option> 
+          <option>perofated</option> 
+          <option>others</option> 
+          </select>
+      </div>
+
+      <div class="col-sm-2">
+      <label for="inputPassword" class="ml-2 col-form-label"></label>
+      </div>
+   </div>
+
+   <div class="form-group row">
+    <div class="col-sm-2">
+    <label for="inputPassword" class="col-sm-auto">Tubewell housing pipe size:</label>
+    </div>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" formControlName="tubewellHousingPipeSize" >
+      <span *ngIf="!page6Form.get('tubewellHousingPipeSize').valid && page6Form.get('tubewellHousingPipeSize').touched"  class="text-danger">
+        <span *ngIf="page6Form.get('tubewellHousingPipeSize').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+        <span *ngIf="page6Form.get('tubewellHousingPipeSize').errors['required']"><small>This field is required!</small></span>
+      </span>
+    </div>
+    <div class="col-sm-2">
+    <label for="inputPassword"  class="col-form-label">mm</label>
+    </div>
+
+    
+    <div class="col-sm-2">
+    <label for="inputPassword" class="col-sm-auto col-form-label">Pumping discharge:</label>
+    </div>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" formControlName="pumpingDischarge" >
+      <span *ngIf="!page6Form.get('pumpingDischarge').valid && page6Form.get('pumpingDischarge').touched"  class="text-danger">
+        <span *ngIf="page6Form.get('pumpingDischarge').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+        <span *ngIf="page6Form.get('pumpingDischarge').errors['required']"><small>This field is required!</small></span>
+      </span>
+    </div>
+    <div class="col-sm-2">
+    <label for="inputPassword" class="ml-2 col-form-label">lps</label>
+    </div>
+ </div>
+
+ <div class="form-group row">
+  <div class="col-sm-2">
+  <label for="inputPassword" class="col-sm-auto">Tubewell screen and casing pipe size:</label>
+  </div>
+  <div class="col-sm-2">
+    <input type="text" class="form-control" formControlName="tubewellScreenAndCasingPipeSize" >
+    <span *ngIf="!page6Form.get('tubewellScreenAndCasingPipeSize').valid && page6Form.get('tubewellScreenAndCasingPipeSize').touched"  class="text-danger">
+      <span *ngIf="page6Form.get('tubewellScreenAndCasingPipeSize').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+      <span *ngIf="page6Form.get('tubewellScreenAndCasingPipeSize').errors['required']"><small>This field is required!</small></span>
+    </span>
+  </div>
+
+  <div class="col-sm-2">
+  <label for="inputPassword"  class="col-form-label">mm</label>
+  </div>
+
+  
+  <div class="col-sm-2">
+  <label for="inputPassword" class="col-sm-auto col-form-label">Drawdown:</label>
+  </div>
+  <div class="col-sm-2">
+    <input type="text" class="form-control" formControlName="Drawdown" >
+    <span *ngIf="!page6Form.get('Drawdown').valid && page6Form.get('Drawdown').touched"  class="text-danger">
+      <span *ngIf="page6Form.get('Drawdown').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+      <span *ngIf="page6Form.get('Drawdown').errors['required']"><small>This field is required!</small></span>
+    </span>
+  </div>
+  <div class="col-sm-2">
+  <label for="inputPassword" class="ml-2 col-form-label">m</label>
+  </div>
+</div>
+
+<div class="form-group row">
+<div class="col-sm-2">
+<label for="inputPassword" class="col-sm-auto col-form-label">Static water level:</label>
+</div>
+<div class="col-sm-2">
+  <input type="text" class="form-control" formControlName="staticWaterLevel" >
+  <span *ngIf="!page6Form.get('staticWaterLevel').valid && page6Form.get('staticWaterLevel').touched"  class="text-danger">
+    <span *ngIf="page6Form.get('staticWaterLevel').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+    <span *ngIf="page6Form.get('staticWaterLevel').errors['required']"><small>This field is required!</small></span>
+  </span>
+</div>
+
+<div class="col-sm-2">
+<label for="inputPassword"  class="col-form-label">m</label>
+</div>
+
+
+<div class="col-sm-2">
+<label for="inputPassword" class="col-sm-auto">Aquifer storage coefficient:</label>
+</div>
+<div class="col-sm-2">
+  <input type="text" class="form-control" formControlName="aquiferStorageCoefficient" >
+  <span *ngIf="!page6Form.get('aquiferStorageCoefficient').valid && page6Form.get('aquiferStorageCoefficient').touched"  class="text-danger">
+    <span *ngIf="page6Form.get('aquiferStorageCoefficient').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+    <span *ngIf="page6Form.get('aquiferStorageCoefficient').errors['required']"><small>This field is required!</small></span>
+  </span>
+</div><div class="col-sm-2">
+<label for="inputPassword" class="ml-2 col-form-label"></label>
+</div>
+</div>
+
+<div class="form-group row">
+<div class="col-sm-2">
+<label for="inputPassword" class="col-sm-auto col-form-label"></label>
+</div>
+<div class="col-sm-2">
+</div>
+
+<div class="col-sm-2">
+<label for="inputPassword"  class="col-form-label"></label>
+</div>
+
+
+<div class="col-sm-2">
+<label for="inputPassword" class="col-sm-auto">Aquifer transmissitivity:</label>
+</div>
+<div class="col-sm-2">
+  <input type="text" class="form-control" formControlName="aquiferTransmissivity" >
+  <span *ngIf="!page6Form.get('aquiferTransmissivity').valid && page6Form.get('aquiferTransmissivity').touched"  class="text-danger">
+    <span *ngIf="page6Form.get('aquiferTransmissivity').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+    <span *ngIf="page6Form.get('aquiferTransmissivity').errors['required']"><small>This field is required!</small></span>
+  </span>
+</div>
+<div class="col-sm-2">
+<label for="inputPassword" class="ml-2 col-form-label">m/day</label>
+</div>
+</div>
+
+
+      </fieldset>
+
+      <br>
+
+      <!-- End of Tubewell information -->
+
+      <br>
+
+      <fieldset>
+        <legend class="col-md-2 col-form-label">Pump Information</legend>
+        <div class="form-group row">
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto col-form-label"></label>
+          </div>
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-2">
+          <label for="inputPassword"  class="ml-2 col-form-label"></label>
+          </div>
+
+          
+          <div class="col-sm-6">
+          <label for="inputPassword" class="col-form-label"><h5><b>Pump house information</b></h5></label>
+          </div>
+       </div>
+
+       <div class="form-group row">
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Brand of pump:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="brandOfPump" >
+            <span *ngIf="!page6Form.get('brandOfPump').valid && page6Form.get('brandOfPump').touched"  class="text-danger">
+              <!-- <span *ngIf="page6Form.get('brandOfPump').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+              <span *ngIf="page6Form.get('brandOfPump').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+          <div class="col-sm-2">
+          </div>
+
+          
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto">Size of pump house: (lxbxh)</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="sizeOfPumpHouse" >
+            <span *ngIf="!page6Form.get('sizeOfPumpHouse').valid && page6Form.get('sizeOfPumpHouse').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('sizeOfPumpHouse').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('sizeOfPumpHouse').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+          <div class="col-sm-2">
+          <label for="inputPassword" class="ml-2 col-form-label">mxmxm</label>
+          </div>
+       </div>
+
+       <div class="form-group row">
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Power:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="Power" >
+          <span *ngIf="!page6Form.get('Power').valid && page6Form.get('Power').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('Power').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('Power').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+
+        <div class="col-sm-2">
+        <label for="inputPassword"  class="col-form-label">HP</label>
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto">Height of overhead tank:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="heightOfOverheadTank" >
+          <span *ngIf="!page6Form.get('heightOfOverheadTank').valid && page6Form.get('heightOfOverheadTank').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('heightOfOverheadTank').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('heightOfOverheadTank').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+        <div class="col-sm-2">
+        <label for="inputPassword" class="ml-2 col-form-label">m</label>
+        </div>
+     </div>
+
+     <div class="form-group row">
+      <div class="col-sm-2">
+      <label for="inputPassword" class="col-sm-auto col-form-label">Head:</label>
+      </div>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" formControlName="Head" >
+        <span *ngIf="!page6Form.get('Head').valid && page6Form.get('Head').touched"  class="text-danger">
+          <span *ngIf="page6Form.get('Head').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+          <span *ngIf="page6Form.get('Head').errors['required']"><small>This field is required!</small></span>
+        </span>
+      </div>
+
+      <div class="col-sm-2">
+      <label for="inputPassword"  class="col-form-label">m</label>
+      </div>
+
+      
+      <div class="col-sm-2">
+      <label for="inputPassword" class="col-sm-auto">Volume of overhead tank:</label>
+      </div>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" formControlName="volumeOfOverheadTank" >
+        <span *ngIf="!page6Form.get('volumeOfOverheadTank').valid && page6Form.get('volumeOfOverheadTank').touched"  class="text-danger">
+          <span *ngIf="page6Form.get('volumeOfOverheadTank').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+          <span *ngIf="page6Form.get('volumeOfOverheadTank').errors['required']"><small>This field is required!</small></span>
+        </span>
+      </div>
+      <div class="col-sm-2">
+      <label for="inputPassword" class="ml-2 col-form-label">cu.m</label>
+      </div>
+   </div>
+
+   <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="inputPassword" class="col-sm-auto">Pump discharge:</label>
+      </div>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" formControlName="pumpDischarge" >
+        <span *ngIf="!page6Form.get('pumpDischarge').valid && page6Form.get('pumpDischarge').touched"  class="text-danger">
+          <span *ngIf="page6Form.get('pumpDischarge').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+          <span *ngIf="page6Form.get('pumpDischarge').errors['required']"><small>This field is required!</small></span>
+        </span>
+      </div>
+      <div class="col-sm-2">
+      <label for="inputPassword" class="ml-2 col-form-label">lps</label>
+      </div>
+
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+   </div>
+
+    
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto">Efficiency of motor:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="efficiencyOfMotor" >
+          <span *ngIf="!page6Form.get('efficiencyOfMotor').valid && page6Form.get('efficiencyOfMotor').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('efficiencyOfMotor').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('efficiencyOfMotor').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+        <div class="col-sm-2">
+        <label for="inputPassword" class="ml-2 col-form-label">%</label>
+        </div>
+
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto">Efficiency of pump:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="efficiencyOfPump" >
+          <span *ngIf="!page6Form.get('efficiencyOfPump').valid && page6Form.get('efficiencyOfPump').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('efficiencyOfPump').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('efficiencyOfPump').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+        <div class="col-sm-2">
+        <label for="inputPassword" class="ml-2 col-form-label">%</label>
+        </div>
+
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto">Pump lowering depth:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="pumpLoweringDepth" >
+          <span *ngIf="!page6Form.get('pumpLoweringDepth').valid && page6Form.get('pumpLoweringDepth').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('pumpLoweringDepth').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('pumpLoweringDepth').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+        <div class="col-sm-2">
+        <label for="inputPassword" class="ml-2 col-form-label">m</label>
+        </div>
+
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto">Column pipe size:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="columnPipeSize" >
+          <span *ngIf="!page6Form.get('columnPipeSize').valid && page6Form.get('columnPipeSize').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('columnPipeSize').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('columnPipeSize').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+        <div class="col-sm-2">
+        <label for="inputPassword" class="ml-2 col-form-label">mm</label>
+        </div>
+
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2">
+      <label for="inputPassword" class="col-sm-auto col-form-label">Column type:</label>
+      </div>
+      <div class="col-sm-2">
+        <select class="form-control" >
+          <option>MS</option>
+          <option>GI</option>
+          </select>
+      </div>
+      <div class="col-sm-2">
+      </div>
+
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+      </fieldset>
+
+      <br>
+
+      <!-- End of Pump information -->
+
+      <br>
+
+      <fieldset>
+        <legend class="col-md-2 col-form-label">Electrification</legend>
+        <div class="form-group row">
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto">Length of 11KV HT transmission line:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="lengthOf11kvHTTransmissionLine" >
+            <span *ngIf="!page6Form.get('lengthOf11kvHTTransmissionLine').valid && page6Form.get('lengthOf11kvHTTransmissionLine').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('lengthOf11kvHTTransmissionLine').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('lengthOf11kvHTTransmissionLine').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+          <div class="col-sm-2">
+          <label for="inputPassword"  class="ml-2 col-form-label">m</label>
+          </div>
+
+          
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto">Transformer capacity:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="transformerCapacity" >
+            <span *ngIf="!page6Form.get('transformerCapacity').valid && page6Form.get('transformerCapacity').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('transformerCapacity').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('transformerCapacity').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-form-label">KVA</label>
+          </div>
+       </div>
+
+       <div class="form-group row">
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto">440 V lt transiossion line:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="transmissionLine" >
+            <span *ngIf="!page6Form.get('transmissionLine').valid && page6Form.get('transmissionLine').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('transmissionLine').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('transmissionLine').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+
+          <div class="col-sm-2">
+          <label for="inputPassword"  class="col-form-label">m</label>
+          </div>
+
+          
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Control panell:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="controlPanel" >
+            <span *ngIf="!page6Form.get('controlPanel').valid && page6Form.get('controlPanel').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('controlPanel').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('controlPanel').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+          <div class="col-sm-2">
+          <label for="inputPassword" class="ml-2 col-form-label">HP</label>
+          </div>
+       </div>
+
+       <div class="form-group row">
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">No. of poles:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="noOfPoles" >
+          <span *ngIf="!page6Form.get('noOfPoles').valid && page6Form.get('noOfPoles').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('noOfPoles').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('noOfPoles').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+
+        <div class="col-sm-2">
+        <label for="inputPassword"  class="col-form-label"></label>
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Voltage stabilizer:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="volatageStabilizer" >
+          <span *ngIf="!page6Form.get('volatageStabilizer').valid && page6Form.get('volatageStabilizer').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('volatageStabilizer').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('volatageStabilizer').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+        <div class="col-sm-2">
+        <label for="inputPassword" class="ml-2 col-form-label">KVA</label>
+        </div>
+      </div>
+
+      </fieldset>
+
+      <br>
+
+      <!-- End of electrification -->
+
+      <br>
+
+      <fieldset>
+        <legend class="col-md-2 col-form-label">Distribution system</legend>
+        <div class="form-group row">
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto">Type of distribution system:</label>
+          </div>
+          <div class="col-sm-2">
+            <select class="form-control" >
+              <option>open channel</option>
+              <option>buried pipe</option>
+              </select>
+          </div>
+  
+          <div class="col-sm-2">
+          <label for="inputPassword"  class="col-form-label"></label>
+          </div>
+
+          
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto">No. of outlets:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="noOfOutlets" >
+            <span *ngIf="!page6Form.get('noOfOutlets').valid && page6Form.get('noOfOutlets').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('noOfOutlets').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('noOfOutlets').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-form-label"></label>
+          </div>
+       </div>
+
+       <div class="form-group row">
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto">Length of open channel:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="lengthOfOpenChannel" >
+            <span *ngIf="!page6Form.get('lengthOfOpenChannel').valid && page6Form.get('lengthOfOpenChannel').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('lengthOfOpenChannel').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('lengthOfOpenChannel').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+
+          <div class="col-sm-2">
+          <label for="inputPassword"  class="col-form-label">m</label>
+          </div>
+
+          
+          <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto">Size of alpha-alpha valve:</label>
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="sizeOfAlphaAlphaValve" >
+            <span *ngIf="!page6Form.get('sizeOfAlphaAlphaValve').valid && page6Form.get('sizeOfAlphaAlphaValve').touched"  class="text-danger">
+              <span *ngIf="page6Form.get('sizeOfAlphaAlphaValve').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+              <span *ngIf="page6Form.get('sizeOfAlphaAlphaValve').errors['required']"><small>This field is required!</small></span>
+            </span>
+          </div>
+          <div class="col-sm-2">
+          <label for="inputPassword" class="ml-2 col-form-label"></label>
+          </div>
+       </div>
+
+       <div class="form-group row">
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Pipe material:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="pipeMaterial" >
+          <span *ngIf="!page6Form.get('pipeMaterial').valid && page6Form.get('pipeMaterial').touched"  class="text-danger">
+            <!-- <span *ngIf="page6Form.get('pipeMaterial').errors['pattern']"><small>This is invalid! please enter number!</small></span> -->
+            <span *ngIf="page6Form.get('pipeMaterial').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+
+        <div class="col-sm-2">
+        <label for="inputPassword"  class="col-form-label"></label>
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">Length of pipe:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="lengthOfPipe" >
+          <span *ngIf="!page6Form.get('lengthOfPipe').valid && page6Form.get('lengthOfPipe').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('lengthOfPipe').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('lengthOfPipe').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+        <div class="col-sm-2">
+        <label for="inputPassword" class="ml-2 col-form-label"></label>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto col-form-label">No. of surge raiser:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" formControlName="noOfSurgeRaiser" >
+          <span *ngIf="!page6Form.get('noOfSurgeRaiser').valid && page6Form.get('noOfSurgeRaiser').touched"  class="text-danger">
+            <span *ngIf="page6Form.get('noOfSurgeRaiser').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+            <span *ngIf="page6Form.get('noOfSurgeRaiser').errors['required']"><small>This field is required!</small></span>
+          </span>
+        </div>
+
+        <div class="col-sm-2">
+        <label for="inputPassword"  class="col-form-label"></label>
+        </div>
+      </div>
+
+      </fieldset>
+
+      <br>
+
+      <!-- End of Distribution system -->
+
+      <br>
+      <br>
+
+      <div class="btn-toolbar">
+        <div>
+          <button class="btn btn-success ml-2 mr-4" type="submit"  >Save</button>
+          <button class="btn btn-primary ml-2 mr-4" type="submit" >Submit</button>
+          <button class="btn ml-2 mr-4" type="fetch" >Fetch</button>
+          <button class="btn btn-info ml-2 mr-4" type="edit" >Edit</button>
+          <button class="btn btn-warning ml-2 mr-4"  type="button" >Reset</button>
+          <button class="btn btn-danger ml-2 mr-4" (click)="remove(this.id)" type="button" >Delete</button>
+          <button class="btn btn-danger ml-2 mr-4" type="cancel" >Cancel</button>
+          
+          </div>
+        </div>
+<br>
+
+      
+</fieldset>
+  </div>
+</form>

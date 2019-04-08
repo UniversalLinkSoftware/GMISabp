@@ -1,0 +1,313 @@
+<div id="home">
+    <div class="jumbotron">
+        <fieldset>
+            
+            <form [formGroup]="project" (ngSubmit)='onSubmit()'>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Project Name:</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" formControlName="subProjectName">
+                        <span *ngIf="!project.get('subProjectName').valid && project.get('subProjectName').touched" class="text-danger">
+            <span *ngIf="project.get('subProjectName').errors['required']"><small>This field is required!</small></span>
+                        </span>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-primary">Edit</button>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-sm-auto col-form-label">Program:</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <select id="inputState" class="form-control" placeholder="Select One">
+          <option>CMIASP</option>
+          <option>IISP</option>
+          <option>IWRMP</option>
+          <option>MIP</option>
+          <option>NITP</option>
+          <option>SIP</option>
+        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <select id="inputState" class="form-control" placeholder="Select One">
+          <option>CMIASP</option>
+          <option>IISP</option>
+          <option>IWRMP</option>
+          <option>MIP</option>
+          <option>NITP</option>
+          <option>SIP</option>
+        </select>
+                    </div>
+                    
+                    <div (click)="openModal()" class="btn btn-primary col-sm-2" >Add/Edit Program</div>
+
+                </div>
+
+                <div class="form-group row ">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label ">Sub Project Type:</label>
+                    </div>
+                    <div class=" form-check form-check-inline col-sm-2">
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">New</label>
+                    </div>
+                    
+                    <div class="form-check form-check-inline col-sm-2">
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox3">Rehabilaton</label>
+                    </div>
+                </div>
+                
+
+                <div class="form-group col-12">
+                    <fieldset>
+                        <legend class="col-md-3 col-form-label">Management System</legend>
+                        
+                        <div class="form-group row">
+                        <div class="col-sm-2">
+                            <input type="radio">
+                            <label>FMIS</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="radio">
+                            <label>AMIS</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="radio">
+                            <label>JMIS</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="radio">
+                            <label>others</label>
+                            <input type="text" class="form-control ml-2">
+                        </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Command Area:</label>
+                    </div>
+                    <div class="col-md-auto col-form-label">GCA</div>
+                    <div class="col-sm-2">
+                        <input type="number" class="form-control" formControlName="commandAreagca">
+                        <span *ngIf="!project.get('commandAreagca').valid && project.get('commandAreagca').touched" class="text-danger">
+              <span *ngIf="project.get('commandAreagca').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                        <span *ngIf="project.get('commandAreagca').errors['required']"><small>This field is required!</small></span>
+                        </span>
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="col-md-left col-form-label">ha</label>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">NCA</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" formControlName="commandAreanca">
+                        <span *ngIf="!project.get('commandAreanca').valid && project.get('commandAreanca').touched" class="text-danger">
+              <span *ngIf="project.get('commandAreanca').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                        <span *ngIf="project.get('commandAreanca').errors['required']"><small>This field is required!</small></span>
+                        </span>
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="col-md-left col-form-label">ha</label>
+                    </div>
+
+                </div>
+                <div class="form-group row ">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label ">Project Status</label>
+                    </div>
+                    <div class=" form-check form-check-inline">
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Ongoing</label>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox3">Completed</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Current Phase of Project:</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <select id="inputState" class="form-control">
+            <option>-Select One-</option>
+            <option>Demand Form</option>
+            <option>Identification</option>
+            <option>Feasibility/Pre-feasibility</option>
+            <option>Detail Design</option>
+            <option>Under Construction</option>
+            <option>Operation</option>
+            <option>Rehabilitation</option>
+            
+          </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Sub Project Comment:</label>
+                    </div>
+                    
+                        <div>
+                          <div *ngIf="fileUpload.status==='error'">
+                              <div [innerHTML]="fileUpload.message"></div>
+                          </div>
+                          <div *ngIf="fileUpload.status==='progress'">
+                              <div class="progress" style="height: 20px;margin-bottom:20px;">
+                                <div class="progress-bar" role="progressbar" [style.width.%]="fileUpload.message" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{fileUpload.message}}%</div>
+                              </div>
+                          </div>
+                          <form [formGroup] = "profileForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                              <input type="text" formControlName="name" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                              <input type="file" name="profile" (change)="onSelectedFile($event)" />
+                            </div>
+                            <div class="form-group">
+                              <button type="submit" class="btn btn-success">Upload</button>
+                            </div>
+                          </form>
+                          <div *ngIf="fileUpload.status==='success'">
+                            <img [src]="fileUpload.filePath" height="200px" />
+                          </div>
+                          <p>{{ error }}</p>
+                        </div>
+                      </div>
+
+                
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label class="col-md-auto col-form-label">Other Information:</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Prepared By:</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" formControlName="preparedBy">
+                        <span *ngIf="!project.get('preparedBy').valid && project.get('preparedBy').touched" class="text-danger">
+              <span *ngIf="project.get('preparedBy').errors['required']"><small>This field is required!</small></span>
+                        </span>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="col-md-auto">Recommended By:</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" formControlName="recomendedBy">
+                        <span *ngIf="!project.get('recomendedBy').valid && project.get('recomendedBy').touched" class="text-danger">
+              <span *ngIf="project.get('recomendedBy').errors['required']"><small>This field is required!</small></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Approved By:</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" formControlName="approvedBy">
+                        <span *ngIf="!project.get('approvedBy').valid && project.get('approvedBy').touched" class="text-danger">
+              <span *ngIf="project.get('approvedBy').errors['required']"><small>This field is required!</small></span>
+                        </span>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label ml-1">Approved Date:</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="date" class="form-control ml-1" formControlName="approvedDate">
+                        <span *ngIf="!project.get('approvedDate').valid && project.get('approvedDate').touched" class="text-danger">
+              <span *ngIf="project.get('approvedDate').errors['required']"><small>This field is required!</small></span>
+                        </span>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Start Date:</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="date" class="form-control" formControlName="startDate">
+                        <span *ngIf="!project.get('startDate').valid && project.get('startDate').touched" class="text-danger">
+              <span *ngIf="project.get('startDate').errors['required']"><small>This field is required!</small></span>
+                        </span>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="col-md-left col-form-label">AD</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">End Date:</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="date" class="form-control" formControlName="endDate">
+                        <span *ngIf="!project.get('endDate').valid && project.get('endDate').touched" class="text-danger">
+             <span *ngIf="project.get('endDate').errors['required']"><small>This field is required!</small></span>
+                        </span>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="col-md-left col-form-label">AD</label>
+                    </div>
+                </div>
+                <br>
+
+                <div class="btn-toolbar">
+                    <div>
+                        <button class="btn btn-success ml-2 mr-4" type="save" >Save</button>
+                        <button class="btn btn-primary ml-2 mr-4" type="submit">Submit</button>
+                        <button class="btn ml-2 mr-4" type="fetch">Fetch</button>
+                        <button class="btn btn-info ml-2 mr-4" type="edit">Edit</button>
+                        <button class="btn btn-warning ml-2 mr-4" type="reset">Reset</button>
+                        <button class="btn btn-danger ml-2 mr-4" type="cancel">Cancel</button>
+                    </div>
+                </div>
+
+                <br>
+
+
+            </form>
+        </fieldset>
+    </div>
+</div>
+<!-- <fieldset>
+    <legend> legend </legend>
+    <label for="id"> label </label>
+    <input type="text" id="id" name="name" ng-model="fieldSetHasValue" ng-change="fieldSetHasValue = true">
+    <label for="id2"> label </label>
+    <input type="text" id="id2" name="name2" ng-model="fieldSetHasValue" ng-change="fieldSetHasValue = true">
+  </fieldset>
+    <br>
+    <div class="panel panel-default">
+
+        <div class="panel-heading">Fieldset Exemple</div>
+        <div class="panel-body">
+
+              <fieldset class="col-md-6">
+            <legend>Fieldset Title</legend>
+
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <p>Fieldset content...</p>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <div class="clearfix"></div>
+              </div>
+
+  </div> -->

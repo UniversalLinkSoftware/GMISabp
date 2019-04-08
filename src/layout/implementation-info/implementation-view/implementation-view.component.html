@@ -1,0 +1,207 @@
+<h1>This is the view component</h1>
+<div *ngFor="let implementations of implementation">
+    <div *ngFor="let imptables of imptable">
+  <h3>
+      <a [routerLink]="['implementation-edit/', implementations.id]">
+        <button class="btn btn-info ml-2 mr-4" type="edit">Edit</button></a>
+        <button class="btn btn-info ml-2 mr-4" (click)="captureScreen()" >Print</button>
+  </h3>
+
+
+<div id="a">
+<div class="jumbotron">
+  <form>
+ <fieldset>
+    <legend class="col-md-3 col-form-label">Implementation Information</legend>
+    <fieldset>
+        <legend class="col-md-3 col-form-label">Progress Monitoring</legend>
+        <div class="form-group row">
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">GON Share:</label>
+            </div>
+            <div class="col-sm-2">
+             {{implementations.gonShare}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">NRs</label>
+            </div>
+
+            
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">WUA share:</label>
+            </div>
+            <div class="col-sm-2">
+              {{implementations.wuaShare}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-form-label">NRs</label>
+            </div>
+         </div>
+
+         <div class="form-group row">
+            <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto col-form-label">Physical progress:</label>
+                </div>
+                <div class="col-sm-10">
+                  {{implementations.physicalProgress}}
+                </div>
+         </div>
+
+         <div class="form-group row">
+            <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto">Physical progress date:</label>
+              </div>
+              <div class="col-sm-2">
+                {{implementations.physicalProgressDate}}
+                 
+              </div>
+              <div class="col-sm-2">
+                  <label for="label" class="col-form-label">AD</label>
+                  </div>
+
+         </div>
+         <div class="form-group row">
+            <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto col-form-label">Financial progress:</label>
+                </div>
+                <div class="col-sm-10">
+                  {{implementations.finiancialProgress}}
+                </div>
+         </div>
+
+         <div class="form-group row">
+            <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto">Financial progress date:</label>
+              </div>
+              <div class="col-sm-2">
+                {{implementations.finiancialProgressDate}}
+              </div>
+              <div class="col-sm-2">
+                  <label for="inputPassword" class="col-form-label">AD</label>
+                  </div>
+
+         </div>
+    </fieldset>
+
+  <br>
+
+    <fieldset>
+        <legend class="col-md-3 col-form-label">Institution Monitoring</legend>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto">WUA Development Office
+                    (Name,No of WUA Members):</label>
+                </div>
+                <div class="col-sm-10">
+                  {{implementations.wuaDevelopmentOffice}}
+                </div>
+         </div>
+         <div class="form-group row">
+            <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto">WUA registration  date:</label>
+              </div>
+              <div class="col-sm-2">
+                {{implementations.wuaRegistrarionDate}}
+              </div>
+              <div class="col-sm-2">
+                
+                  <label for="inputPassword" class="col-form-label">AD</label>
+                  </div>
+
+         </div>
+         
+
+         <fieldset>
+            <legend class="col-md-3 col-form-label">WUA training</legend>
+            <div class="form-group row">
+                <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto col-form-label">Training name:</label>
+                </div>
+                <div class="col-sm-2">
+                  {{imptables.trainingName}}
+                </div>
+                <div class="col-sm-2">
+                <label for="inputPassword"  class="ml-2 col-form-label"></label>
+                </div>
+    
+                
+                <div class="col-sm-2">
+                    <label for="inputPassword" class="col-sm-auto">Training date:</label>
+                  </div>
+                  <div class="col-sm-2">
+                    {{imptables.trainingDate}}
+    
+                  </div>
+                  <div class="col-sm-2">
+                      <label for="inputPassword" class="col-form-label">AD</label>
+                      </div>
+             </div>
+    
+             <div class="form-group row">
+                <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto col-form-label">Training period:</label>
+                </div>
+                <div class="col-sm-2">
+                  {{imptables.trainingPeriod}}
+                </div>
+    
+                <div class="col-sm-2">
+                <label for="inputPassword"  class="col-form-label">days</label>
+                </div>
+    
+                
+                <div class="col-sm-2">
+                <label for="inputPassword" class="col-sm-auto col-form-label">No. of participant:</label>
+                </div>
+                <div class="col-sm-2">
+                  {{imptables.numberOfParticipants}}
+                </div>
+                <div class="col-sm-2">
+                <label for="inputPassword" class="ml-2 col-form-label"></label>
+                </div>
+             </div>
+             <br>
+             <div class="btn-toolbar">
+                <div>
+                  <!-- <button class="btn btn-success ml-2 mr-4" type="button" (click)="buttonClicked()"[disabled]="!page8Form.get('trainingName').valid && page8Form.get('trainingName').touched
+                   && !page8Form.get('trainingDate').valid && page8Form.get('trainingDate').touched
+                  && !page8Form.get('trainingPeriod').valid && page8Form.get('trainingPeriod').touched
+                  && !page8Form.get('numberOfParticipants').valid && page8Form.get('numberOfParticipants').touched ">Add </button>  -->
+                  <!-- <button class="btn btn-success ml-2 mr-4" type="button" (click)="buttonClicked()"[disabled]="!page8Form.valid">Add</button>
+                  <button class="btn btn-danger " type="button" >Cancel</button> -->
+                  </div>
+              </div>
+              <br>
+
+              <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        
+                        <th scope="col">Training Name </th>
+                        <th scope="col">Training Date</th>
+                        <th scope="col">Training Period</th>
+                        <th scope="col">No. of Participants</th>
+                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr >
+                        
+                        <td>{{imptables.trainingName}}</td>
+                        <td>{{imptables.trainingDate}}</td>
+                        <td>{{imptables.trainingPeriod}}</td>
+                        <td>{{imptables.numberOfParticipants}}</td>
+                        
+                      </tr>
+                 
+                    </tbody>
+                  </table>
+                </div>
+
+         </fieldset>
+    </fieldset>
+    <br>
+
+    
+

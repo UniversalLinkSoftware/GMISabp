@@ -1,0 +1,465 @@
+
+<div class="jumbotron">
+  <form [formGroup]="page3Form" (ngSubmit)='onSubmit()'>
+    <fieldset>
+      <div class="form-group row">
+        <div class="col-sm-2" >
+          <label for="inputPassword" class="col-sm-auto col-form-label">No. of household:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class=" form-control " id="NOH" formControlName="numberOfHousehold">
+          <span *ngIf="!page3Form.get('numberOfHousehold').valid && page3Form.get('numberOfHousehold').touched" class="text-danger">
+          <span *ngIf="page3Form.get('numberOfHousehold').valid"><small>Only Numbers Allowed.</small></span>
+          <span *ngIf="page3Form.get('numberOfHousehold').touched"><small>Please Enter Valid text</small></span>
+          </span>
+          <!-- {{socials.numberOfHousehold}} -->
+        </div>
+        <div class="col-sm-2">
+        <label for="inputPassword" class="col-sm-auto">Womem headed household:</label>
+        </div>
+        <div class="col-sm-2" >
+          <input type="text" class="form-control" id="womenInHousehold" formControlName="womenInHousehold">
+          <span *ngIf="!page3Form.get('womenInHousehold').valid && page3Form.get('womenInHousehold').touched" class="text-danger">
+          <span *ngIf="page3Form.get('womenInHousehold').valid"><small>Only Numbers Allowed.</small></span>
+          <span *ngIf="page3Form.get('womenInHousehold').touched"><small>Please Enter Valid text</small></span>
+          </span>
+        </div>
+        <div class="col-sm-2">
+          <label for="inputPassword" class="col-sm-auto col-form-label">Year of survey:</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="date" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Female</label>
+            </div>
+            <div class="col-sm-2">
+                    <input type="text" class="form-control" id="F" formControlName="female">
+                    <span *ngIf="!page3Form.get('female').valid && page3Form.get('female').touched" class="text-danger">
+            <span *ngIf="page3Form.get('female').valid"><small>Only Numbers Allowed.</small></span>
+                    <span *ngIf="page3Form.get('female').touched"><small>Please Enter Valid text</small></span>
+                    </span>
+            </div>
+
+
+
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Male:</label>
+            </div>
+            <div class="col-sm-2">
+                    <input type="text" class="form-control" id="M" formControlName="male">
+                        <span *ngIf="!page3Form.get('male').valid && page3Form.get('male').touched" class="text-danger">
+                    <span *ngIf="page3Form.get('male').valid"><small>Only Numbers Allowed.</small></span>
+                        <span *ngIf="page3Form.get('male').touched"><small>Please Enter Valid text</small></span>
+                        </span>
+            </div>
+            <div class="col-sm-2">
+                    <label for="inputPassword" class="col-sm-auto col-form-label">Total population:</label>
+                    </div>
+                    <div class="col-sm-2">
+                            <input type="text" class="form-control" id="totalPopulation" formControlName="totalPopulation">
+                                    <span *ngIf="!page3Form.get('totalPopulation').valid && page3Form.get('totalPopulation').touched" class="text-danger">
+                            <span *ngIf="page3Form.get('totalPopulation').valid"><small>Only Numbers Allowed.</small></span>
+                                    <span *ngIf="page3Form.get('totalPopulation').touched"><small>Please Enter Valid text</small></span>
+                                    </span>
+                    </div>
+
+      </div>
+                        <div class="form-group row">
+                                <div class="col-sm-2">
+                                <label for="inputPassword" class="col-sm-auto">Major source of income:</label>
+                                </div>
+                                <div class="col-sm-2">
+                                        <select class="form-control" >
+                                                <option>government job</option>
+                                                <option>private job</option>
+                                                <option>agriculture</option>
+                                                <option>remittance from foreign countries</option>
+                                                </select>
+                                </div>
+
+                      </div>
+
+                      <div class="form-group row">
+                            <div class="col-sm-2" >
+                            <label for="inputPassword" class="col-sm-auto">Annual income per family:</label>
+                            </div>
+                            <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="annualIncomePerFamily" formControlName="annualIncomePerFamily" >
+            <span *ngIf="!page3Form.get('annualIncomePerFamily').valid && page3Form.get('annualIncomePerFamily').touched">
+  <span *ngIf="page3Form.get('annualIncomePerFamily').valid"><small>Only Numbers Allowed.</small></span>
+            <span *ngIf="page3Form.get('annualIncomePerFamily').touched"><small>Please Enter Valid text</small></span>
+            </span>
+                            </div>
+
+
+
+                            <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">From agriculture:</label>
+                            </div>
+                            <div class="col-sm-2" >
+                                    <input type="text" class="form-control" id="fromAgriculture" formControlName="fromAgriculture" >
+                <span *ngIf="!page3Form.get('fromAgriculture').valid && page3Form.get('fromAgriculture').touched">
+  <span *ngIf="page3Form.get('fromAgriculture').valid"><small>Only Numbers Allowed.</small></span>
+                <span *ngIf="page3Form.get('fromAgriculture').touched"><small>Please Enter Valid text</small></span>
+                </span>
+                            </div>
+
+
+                            <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col">From other source:</label>
+                            </div>
+                            <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="fromOtherSource" formControlName="fromOtherSource" >
+                <span *ngIf="!page3Form.get('fromOtherSource').valid && page3Form.get('fromOtherSource').touched">
+  <span *ngIf="page3Form.get('fromOtherSource').valid"><small>Only Numbers Allowed.</small></span>
+                <span *ngIf="page3Form.get('fromOtherSource').touched"><small>Please Enter Valid text</small></span>
+                </span>
+                            </div>
+
+
+                          </div>
+
+                          <div class="form-group row">
+                                <div class="col-sm-2" >
+                                <label for="inputPassword" class="col-sm-auto col-form-label">Literacy rate:</label>
+                                </div>
+                                <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="literacyRate" formControlName="literacyRate" >
+                <span *ngIf="!page3Form.get('literacyRate').valid && page3Form.get('literacyRate').touched">
+<span *ngIf="page3Form.get('literacyRate').valid"><small>Only Numbers Allowed.</small></span>
+                <span *ngIf="page3Form.get('literacyRate').touched"><small>Please Enter Valid text</small></span>
+                </span>
+                                </div>
+
+
+
+                                <div class="col-sm-2">
+                                <label for="inputPassword" class="col-sm-auto col-form-label">Female:</label>
+                                </div>
+                                <div class="col-sm-2" >
+                                        <input type="text" class="form-control" id="F" formControlName="literacyFemale">
+                                <span *ngIf="!page3Form.get('literacyFemale').valid && page3Form.get('literacyFemale').touched" class="text-danger">
+                        <span *ngIf="page3Form.get('literacyFemale').valid"><small>Only Numbers Allowed.</small></span>
+                                <span *ngIf="page3Form.get('literacyFemale').touched"><small>Please Enter Valid text</small></span>
+                                </span>
+                                </div>
+
+
+                                <div class="col-sm-2">
+                                <label for="inputPassword" class="col-sm-auto col-form-label">Male:</label>
+                                </div>
+                                <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="M" formControlName="literacyMale">
+                                        <span *ngIf="!page3Form.get('literacyMale').valid && page3Form.get('literacyMale').touched" class="text-danger">
+                                    <span *ngIf="page3Form.get('literacyMale').valid"><small>Only Numbers Allowed.</small></span>
+                                        <span *ngIf="page3Form.get('literacyMale').touched"><small>Please Enter Valid text</small></span>
+                                        </span>
+                                </div>
+
+
+                              </div>
+                              <br>
+                              <div class="card mb-3">
+                                <div class="card-header">Ethnic groups:</div>
+                                            <div class="card-body table-responsive">
+                                              <table class="table table-hover table table-bordered table-striped" formGroupName="tableRows">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Name</th>
+                                                    <th>Total Number</th>
+                                                    <th>Percentage</th>
+                                                    <th>Action</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody >
+                                                  <tr *ngFor="let tablerow of page3Form.controls.tableRows.controls; let i = index" [formGroupName] = "i" >
+                                                    <td>
+                                                      <select type="text" id="inputState" class="form-control" formControlName="Name" >
+                                                        <option selected>--Select--</option> <!--a button to show map is needed-->
+                                                        <option>Awadhis</option>
+                                                        <option>Badi People</option>
+                                                        <option>Bahing</option>
+                                                        <option>Baitada</option>
+                                                        <option>Bedia (tribe)</option>
+                                                        <option>Bhotiya</option>
+                                                        <option>Bhujel</option>
+                                                        <option>Bhutia</option>
+                                                        <option>Brahman-Hill</option>
+                                                        <option>Chepang</option>
+                                                        <option>Chhantyal</option>
+                                                        <option>Chhetri</option>
+                                                        <option>Dalit</option>
+                                                        <option>Dawadi</option>
+                                                        <option>Dhanuk</option>
+                                                        <option>Dhimal</option>
+                                                        <option>Gandarbha</option>
+                                                        <option>Ghale</option>
+                                                        <option>Gurkha</option>
+                                                        <option>Gurung people</option>
+                                                        <option>Hayu</option>
+                                                        <option>Japanese people in Nepal</option>
+                                                        <option>Jirel</option>
+                                                        <option>Kamai</option>
+                                                        <option>Kami (caste)</option>
+                                                        <option>Kham Magar</option>
+                                                        <option>Khungkhani</option>
+                                                        <option>Kirat</option>
+                                                        <option>Kirat Yakthung Chumkung</option>
+                                                        <option>Kusunda</option>
+                                                        <option>Lepcha people</option>
+                                                        <option>Lhotshampa</option>
+                                                        <option>Limbu clans and tribes</option>
+                                                        <option>Limbu people</option>
+                                                        <option>Luhar</option>
+                                                        <option>Magars</option>
+                                                        <option>Mankhim</option>
+                                                        <option>Mugali</option>
+                                                        <option>Mukur (tribe)</option>
+                                                        <option>Musahar</option>
+                                                        <option>Muslim</option>
+                                                        <option>Nachhirring</option>
+                                                        <option>Nepalese people of Indian</option>
+                                                        <option>Newa people</option>
+                                                        <option>Oad</option>
+                                                        <option>Paswan</option>
+                                                        <option>Rai people</option>
+                                                        <option>Ranjitkar</option>
+                                                        <option>Raute</option>
+                                                        <option>Sherpa</option>
+                                                        <option>Sunwar</option>
+                                                        <option>Tamang people</option>
+                                                        <option>Thakali</option>
+                                                        <option>Thakurai</option>
+                                                        <option>Thami</option>
+                                                        <option>Tharu people</option>
+                                                        <option>Walungs</option>
+                                                        <option>Yakkha</option>
+                                                        <option>Dhami</option>
+                                                      </select>
+                                                    </td>
+                                                    <td>
+                                                        <input  class="form-control" type="text" formControlsName="Number" />
+                                                    </td>
+                                                    <td>
+                                                      <input  class="form-control" type="text" formControlsName="Percentage" />
+                                                  </td>
+                              
+                                                    <td>
+                                                      <button class="btn btn-success ml-2 "  type="button" (click)="addNewRows()" >Add</button>
+                                                      <button class="btn btn-danger ml-2"  type="button" (click)="deleteRows(i)">Delete</button>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                                  </div>
+                                            </div>
+                                    
+                            
+                            <br>
+
+                            <div class="form-group row">
+                                    <div class="col-sm-2">
+                                    <label for="inputPassword" class="col-sm-auto">Annual population migration in:</label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                            <input type="text" class="form-control" id="populationMigrationIn" formControlName="populationMigrationIn">
+
+                                            <span *ngIf="!page3Form.get('populationMigrationIn').valid && page3Form.get('populationMigrationIn').touched" class="text-danger">
+                          <span *ngIf="page3Form.get('populationMigrationIn').valid"><small>Only Numbers Allowed.</small></span>
+                                            <span *ngIf="page3Form.get('populationMigrationIn').touched"><small>Please Enter Valid text</small></span>
+                                            </span>
+                                    </div>
+
+
+
+                                    <div class="col-sm-2">
+                                    <label for="inputPassword" class="col-sm-auto">Annual population migration out:</label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                            <input type="text" class="form-control" id="populationMigrationOut" formControlName="populationMigrationOut">
+
+                                            <span *ngIf="!page3Form.get('populationMigrationOut').valid && page3Form.get('populationMigrationOut').touched" class="text-danger">
+                      <span *ngIf="page3Form.get('populationMigrationOut').valid"><small>Only Numbers Allowed.</small></span>
+                                            <span *ngIf="page3Form.get('populationMigrationOut').touched"><small>Please Enter Valid text</small></span>
+                                            </span>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-2"></div>
+
+                                  </div>
+                                  <br>
+
+                                  <div class="card mb-3">
+                                    <div class="card-header">Land tenure (household no's):</div>
+                                                <div class="card-body table-responsive">
+                                                        <table class="table table-hover table table-bordered table-striped">
+                                                          <thead>
+                                                            <tr>
+                                                              <th>Category</th>
+                                                              <th>Number</th>
+                                                              <th>Percentage</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td><label>Land oweners</label></td>
+                                                              <td><input  class="form-control" type="text"></td>
+                                                              <td><input  class="form-control" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                    <td><label >Tenants</label></td>
+                                                              <td><input  class="form-control" type="text"></td>
+                                                              <td><input  class="form-control" type="text"></td>
+
+                                                            </tr>
+                                                            <tr>
+
+                                                                    <td><label >Oweners with tenants</label></td>
+                                                              <td><input  class="form-control" type="text"></td>
+                                                              <td><input  class="form-control" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                    <td><label >Landless</label></td>
+                                                                    <td><input  class="form-control" type="text"></td>
+                                                                    <td><input  class="form-control" type="text"></td>
+                                                                  </tr>
+                                                                  <tr>
+
+                                                                        <td><label >Total</label></td>
+                                                                        <td><input  class="form-control" type="text"></td>
+                                                                        <td><input  class="form-control" type="text"></td>
+                                                                      </tr>
+
+                                                          </tbody>
+                                                        </table>
+                                                      </div>
+                                        </div>
+                                <br>
+
+                                <div class="card mb-3">
+                                  <div class="card-header">Farm size (household no's):</div>
+                                                <div class="card-body table-responsive">
+                                                        <table class="table table-hover table table-bordered table-striped">
+                                                          <thead>
+                                                            <tr>
+                                                              <th>Category</th>
+                                                              <th>Number</th>
+                                                              <th>Percentage</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td><label>small(less then 0.5 hectare)</label></td>
+                                                              <td><input  class="form-control" type="text" ></td>
+                                                              <td><input  class="form-control" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                    <td><label >medium(0.5-1.0 hectare)</label></td>
+                                                              <td><input  class="form-control" type="text"></td>
+                                                              <td><input  class="form-control" type="text"></td>
+
+                                                            </tr>
+                                                            <tr>
+
+                                                                    <td><label >large(1.0-1.5 hectare)</label></td>
+                                                              <td><input  class="form-control" type="text"></td>
+                                                              <td><input  class="form-control" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                    <td><label >very large(more then 1.5 hectare)</label></td>
+                                                                    <td><input  class="form-control" type="text"></td>
+                                                                    <td><input  class="form-control" type="text"></td>
+                                                                  </tr>
+                                                                  <tr>
+
+                                                                        <td><label >Total</label></td>
+                                                                        <td><input  class="form-control" type="text"></td>
+                                                                        <td><input  class="form-control" type="text"></td>
+                                                                      </tr>
+
+                                                          </tbody>
+                                                        </table>
+                                                      </div>
+                                        </div>
+                                <br>
+                                <div class="form-group row">
+                                    <div class="col-sm-3 ">
+                                            <label for="inputPassword" class="col-sm-auto col-form-label">Annual food sufficiency:</label>
+                                    </div>
+                                    <div class="col-sm-2 form-check form-check-inline">
+                                            <input type="radio"  id="optionsRadios1" value="option1"  formControlName="annualfoodSufficiency">
+                                            
+                                            <label class="form-check-label" for="inlineCheckbox1">Surplus</label>
+                                          </div>
+                                          <div class="col-sm-2 form-check form-check-inline">
+                                            <input type="radio"  id="optionsRadios2" value="option2"  formControlName="annualfoodSufficiency">
+                                            <label class="form-check-label" for="inlineCheckbox2">Deficit</label>
+                                          </div>
+                                </div>
+
+                                <br>
+
+                                <div class="btn-toolbar">
+                                  <div>
+                                    <button class="btn btn-success ml-2 mr-4" type="submit">Save</button>
+                                   
+                                    <button class="btn ml-2 mr-4" type="fetch" >Fetch</button>
+                                    <button class="btn btn-info ml-2 mr-4" type="edit" >Edit</button>
+                                    <button class="btn btn-warning ml-2 mr-4" type="reset" >Reset</button>
+                                    <button class="btn btn-danger ml-2 mr-4" type="cancel" >Cancel</button>
+                                    </div>
+                                    
+                                  </div>
+
+                                      <br>
+
+            
+
+    </fieldset>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

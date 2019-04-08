@@ -1,0 +1,519 @@
+<h1>This is the view component</h1>
+
+<div *ngFor="let maintables of maintable">
+    <div *ngFor="let branchcanals of branchcanal">
+        <div *ngFor="let maincanals of maincanal">
+            <div *ngFor="let riverhydrologys of riverhydrology">
+
+  <h3>
+      <a [routerLink]="['engineering-edit/', maintables.id]">
+        <button class="btn btn-info ml-2 mr-4" type="edit">Edit</button></a>
+        <button class="btn btn-info ml-2 mr-4" (click)="captureScreen()" >Print</button>
+
+  </h3>
+<div id='a'>
+  <div id="home">
+    <div class="jumbotron">
+      <form >
+        <div>
+         <h3>River Hydrology</h3>
+        </div>
+        
+            <br>
+        <fieldset>
+          <legend class="col-md-3 col-form-label">River Hydrology</legend>
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Catchement Area:</label>
+              </div>
+            <div class="col-sm-2">
+              {{riverhydrologys.catchmentArea}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">Km sq.</label>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto">River Width at Headworks site:</label>
+            </div>
+            <div class="col-sm-2">
+              {{riverhydrologys.riverWidthAtHeadworksSite}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="ml-2 col-form-label">m</label>
+            </div>
+         </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto ">Longitudinal Slope of River at Headworks site: 1:</label>
+            </div>
+            <div class="col-sm-2">
+              {{riverhydrologys.lngSlopeOfRiverAtHeadworksSite}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="ml-2 col-form-label">(V:H)</label>
+            </div>
+  
+          <div class="col-sm-2">
+              <label for="inputPassword" class="col-sm-auto">Average Annual Riverfall:</label>
+                </div>
+              <div class="col-sm-2">
+                {{riverhydrologys.averageAnnualRiverfall}}
+              </div>
+              <div class="col-sm-2">
+                <label for="inputPassword"  class="ml-2 col-form-label">mm</label>
+                </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-3">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Flood Discharge: </label>
+            </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label ml-2">25 Years</label>
+              </div>
+            <div class="col-sm-1">
+              {{riverhydrologys.floodDischarge25}}
+            </div>
+            <div class="col-sm-1">
+            <label class="ml-2 col-form-label">cumec</label>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">50 Years</label>
+            </div>
+            <div class="col-sm-1">
+              {{riverhydrologys.floodDischarge50}}
+            </div>
+            <div class="col-sm-1">
+            <label for="inputPassword" class="ml-2 col-form-label" >cumec</label>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">100 Years</label>
+            </div>
+            <div class="col-sm-1" >
+              {{riverhydrologys.floodDischarge100}}
+            </div>
+            <div class="col-sm-1">
+            <label for="inputPassword" class="ml-2 col-form-label" >cumec</label>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto">Method  of Flood Calculations:</label>
+              </div>
+            <div class="col-sm-2">
+              {{riverhydrologys.methodOfFloodCalculation}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label"></label>
+            </div>
+  
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto ">MIP (2016) Hydrological Region:</label>
+            </div>
+            <div class="col-sm-2">
+              
+                 <!--a button to show map is needed-->
+                {{riverhydrologys.hydrologicalRegion}}
+              
+            </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto">Name of River Source:</label>
+              </div>
+            <div class="col-sm-2">
+              {{riverhydrologys.nameOfRiverSource}}
+            </div>
+            <div class="col-sm-2"></div>
+  
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">River Basin:</label>
+            </div>
+            <div class="col-sm-2">
+              {{riverhydrologys.riverBasin}}
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+        </fieldset>
+        
+        <!--End of River Hydrology-->
+  
+        <br>
+  
+        <!--start of Main Canal-->
+        <div>
+          <h3>Main Canal</h3>
+         </div>
+        
+        <fieldset>
+          <legend class="col-md-3 col-form-label">Main Canal</legend>
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Canal Direction:</label>
+              </div>
+            <div class="col-sm-2">
+              <select id="inputState" class="form-control">
+                <option selected>Right</option>
+                <option>Left</option>
+              </select>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2">
+            
+            </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Total Length:</label>
+              </div>
+            <div class="col-sm-2">
+              {{maincanals.mTotalLength}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">m</label>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Unlined Type Canal length:</label>
+            </div>
+            <div class="col-sm-2">
+              {{maincanals.mUnlinedTypeCanalLength}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">lps</label>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-auto col-form-label">Design Discharge:</label>
+              </div>
+            <div class="col-sm-2">
+              {{maincanals.mDesignDischarge}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">Km</label>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Lined type Canal Length:</label>
+            </div>
+            <div class="col-sm-2">
+              {{maincanals.mLinedTypeCanalLength}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">Km</label>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-auto col-form-label">Top Width:</label>
+              </div>
+            <div class="col-sm-2">
+              {{maincanals.mTopWidth}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">m</label>
+          </div>
+          <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Slide Slope:  1:</label>
+          </div>
+            <div class="col-sm-2">
+              {{maincanals.mSlideSlope}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">(V:H)</label>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-auto col-form-label">Bottom Width:</label>
+              </div>
+            <div class="col-sm-2">
+              {{maincanals.mBottomWidth}}
+            </div>
+            <div class="col-sm-2">
+              <label for="inputPassword"  class="ml-2 col-form-label">m</label>
+            </div>
+            <div class="col-sm-2">
+              <label for="inputPassword" class="col-sm-auto col-form-label">Longitudinal Slope:  1:</label>
+            </div>
+            <div class="col-sm-2">
+              {{maincanals.mLongitudinalSlope}}
+            </div>
+            <div class="col-sm-2">
+              <label for="inputPassword"  class="ml-2 col-form-label">(V:H)</label>
+            </div>
+          </div>
+  
+  
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-auto col-form-label">No. of Branch Canal:</label>
+              </div>
+            <div class="col-sm-2">
+              {{maincanals.mNumberOfBranchCanal}}
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Branch Canal length:</label>
+            </div>
+            <div class="col-sm-2">
+              {{maincanals.mBranchCanalLength}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">Km</label>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-auto col-form-label">Total Depth:</label>
+              </div>
+            <div class="col-sm-2">
+              {{maincanals.mTotalDepth}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2">m</label>
+            </div>
+          </div>
+  
+          <br>
+  
+          <div class="table table-striped table-bordered" >
+            <div class="card mb-3">
+              <div class="card-header">Branch Canal Table</div>
+                <div class="card-body table-responsive">
+                  <table class="table table-hover table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Structure Type</th>
+                        <th>No of Structure</th>
+                        <!-- <th>Action</th> -->
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr >
+                        <td>
+                          <!-- <select type="text" id="inputState" class="form-control"  > -->
+                            <!-- <option selected>--Select--</option> a button to show map is needed -->
+                            <!-- <option>Aqueduct</option>
+                            <option>Supper Passage</option>
+                            <option>Excapes/Spillway</option>
+                            <option>Drop Structures</option>
+                            <option>VRB/Foot Bridge</option>
+                            <option>Division Box/Flow Divider</option>
+                            <option>Cross Regulator</option>
+                            <option>Desilting Basin</option>
+                            <option>Protection Works</option>
+                            <option>Level Crossing</option>
+                            <option>Outlet</option>
+                            <option>Others</option> -->
+                          <!-- </select> -->
+                        </td>
+                        <td>
+                            <!-- <input  class="form-control" type="text" formControlsName="Name" /> -->
+                        </td>
+  
+                        <!-- <td>
+                          <button class="btn btn-success ml-2 "  type="button" (click)="addNewRows()" >Add</button>
+                          <button class="btn btn-danger ml-2"  type="button" (click)="deleteRows(i)">Delete</button>
+                        </td> -->
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          
+        
+        </div>
+  
+        <!--End of Main Canal-->
+        <br>
+  
+        <!--Start of Branch Canal-->
+        <div>
+          <h3>Branch Canal</h3>
+         </div>
+         
+        <fieldset>
+          <legend class="col-md-3 col-form-label">Branch Canal</legend>
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Name of Branch Canal:</label>
+              </div>
+            <div class="col-sm-10 ">
+              {{branchcanals.bNameOfBranchCanal}}
+            </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">GCA:</label>
+              </div>
+            <div class="col-sm-2">
+              {{branchcanals.bgca}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">ha</label>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Unlined Type Canal length:</label>
+            </div>
+            <div class="col-sm-2">
+              {{branchcanals.bUnlinedTypeCanalLength}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">km</label>
+            </div>
+  
+         </div>
+  
+         <div class="form-group row">
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">CCA:</label>
+            </div>
+            <div class="col-sm-2">
+              {{branchcanals.bcca}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="ml-2 col-form-label">ha</label>
+            </div>
+  
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Lined type Canal Length:</label>
+            </div>
+            <div class="col-sm-2">
+              {{branchcanals.bLinedTypeCanalLength}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">Km</label>
+            </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-auto col-form-label">Design Discharge:</label>
+              </div>
+            <div class="col-sm-2">
+              {{branchcanals.bDesignDischarge}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">cumec</label>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Total Length:</label>
+            </div>
+            <div class="col-sm-2">
+              {{branchcanals.bTotallength}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">km</label>
+            </div>
+          </div>
+  
+  
+          <!-- <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-auto col-form-label">Sub Branch Length:</label>
+              </div>
+            <div class="col-sm-2">
+              {{branchcanals.bSubBranchLength}}
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword"  class="ml-2 col-form-label">km</label>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Tertiary</label>
+            </div>
+            <div class="col-sm-2">
+              {{branchcanals.btertiary}}
+            </div>
+          </div> -->
+          
+  
+  
+          <div class="form-group row">
+              <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Canal Structure:</label>
+              </div>
+            <div class="col-sm-2">
+              {{branchcanals.bCanalStructure}}
+            </div>
+          </div>
+          <br>
+          <div>
+          <!-- <button class="btn btn-success ml-2 mr-5" type="submit" >Submit</button>
+          <button class="btn btn-primary mr-2" type="button" (click)="onSaveData()" >Save</button> -->
+          <!-- <button class="btn btn-primary mr-2" (click)="buttonClicked()">Click to Insert New Row</button> -->
+          </div>
+  
+          <br>
+  
+          <div class="card mb-3">
+            <div class="card-header">Branch Canal Table</div>
+            <div class="card-body table-responsive">
+              <table class="table table-hover table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>GCA(ha)</th>
+                    <th>CCA(ha)</th>
+                    <th>Total Length</th>
+                    <th>Lined Length</th>
+                    <th>Unlined Length</th>
+                    <th>Design Discharge</th>
+                    <th>Sub-Branch No</th>
+                    <th>Sub-Branch Length</th>
+                    <th>Canal Structure</th>
+                  </tr>
+                </thead>
+                <tbody>
+  
+                    <tr >
+                      <td>{{branchcanals.bNameOfBranchCanal}}</td>
+                      <td>{{branchcanals.bgca}}</td>
+                      <td>{{branchcanals.bcca}}</td>
+                      <td>{{branchcanals.bTotallength}}</td>
+                      <td>{{branchcanals.bLinedTypeCanalLength}}</td>
+                      <td>{{branchcanals.bUnlinedTypeCanalLength}}</td>
+                      <td>{{branchcanals.bDesignDischarge}}</td>
+                      <td>{{branchcanals.btertiary}}</td>
+                      <td>{{branchcanals.bSubBranchLength}}</td>
+                      <td>{{branchcanals.bCanalStructure}}</td>
+  
+                    </tr>
+                </tbody>
+              </table>
+  
+            </div>
+         </div>
+          <br>
+<!--   
+          <div class="btn-toolbar">
+            <div>
+              <button class="btn btn-success ml-2 mr-4" type="save" >Save</button>
+              <button class="btn btn-primary ml-2 mr-4" type="submit" >Submit</button>
+              <button class="btn ml-2 mr-4" type="fetch">Fetch</button>
+              <button class="btn btn-info ml-2 mr-4" type="edit" (click)="onEditData()" >Edit</button>
+              <button class="btn btn-warning ml-2 mr-4" type="reset" >Reset</button>
+              <button class="btn btn-danger ml-2 mr-4" type="cancel" >Cancel</button>
+              </div>
+            </div> -->
+  
+          
+        </fieldset>
+        
+        <br>
+      
+    
+    
+  

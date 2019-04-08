@@ -1,0 +1,467 @@
+<div id="home">
+    <div class="jumbotron">
+        <form [formGroup]="page7Form" >
+
+            <!--start of Economic information-->
+            <fieldset>
+                <legend class="col-md-3 col-form-label">Economic information</legend>
+                <fieldset>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto">Total Project Cost</label></div>
+                        <div class="col-sm-2">
+                            <input type="number" class="form-control" formControlName="totalProjectCost">
+                            <span *ngIf="!page7Form.get('totalProjectCost').valid && page7Form.get('totalProjectCost').touched" class="text-danger">
+              <span *ngIf="page7Form.get('totalProjectCost').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                            <span *ngIf="page7Form.get('totalProjectCost').errors['required']"><small>This field is required!</small></span>
+                            </span>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">Nrs</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">B/C 1:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" class="form-control" formControlName="bcRatio1">
+                            <span *ngIf="!page7Form.get('bcRatio1').valid && page7Form.get('bcRatio1').touched" class="text-danger">
+              <span *ngIf="page7Form.get('bcRatio1').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                            <span *ngIf="page7Form.get('bcRatio1').errors['required']"><small>This field is required!</small></span>
+                            </span>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">(eg:2,3)</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto">GON Share:</label></div>
+                        <div class="col-sm-2">
+                            <input type="number" class="form-control" formControlName="totalProjectCost">
+                            <span *ngIf="!page7Form.get('totalProjectCost').valid && page7Form.get('totalProjectCost').touched" class="text-danger">
+              <span *ngIf="page7Form.get('totalProjectCost').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                            <span *ngIf="page7Form.get('totalProjectCost').errors['required']"><small>This field is required!</small></span>
+                            </span>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">Nrs</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">WUA Share:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" class="form-control" formControlName="bcRatio1">
+                            <span *ngIf="!page7Form.get('bcRatio1').valid && page7Form.get('bcRatio1').touched" class="text-danger">
+              <span *ngIf="page7Form.get('bcRatio1').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                            <span *ngIf="page7Form.get('bcRatio1').errors['required']"><small>This field is required!</small></span>
+                            </span>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">Nrs</label>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6"> -->
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label ">Cositng year:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" formControlName="costingYear">
+                            <span *ngIf="!page7Form.get('costingYear').valid && page7Form.get('costingYear').touched" class="text-danger">
+                    <span *ngIf="page7Form.get('costingYear').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                            <span *ngIf="page7Form.get('costingYear').errors['required']"><small>This field is required!</small></span>
+                            </span>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">AD</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">Discount rate 1:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" class="form-control" formControlName="discountRate1">
+                            <span *ngIf="!page7Form.get('discountRate1').valid && page7Form.get('discountRate1').touched" class="text-danger">
+              <span *ngIf="page7Form.get('discountRate1').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                            <span *ngIf="page7Form.get('discountRate1').errors['required']"><small>This field is required!</small></span>
+                            </span>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">%</label>
+                        </div>
+                    </div>
+
+                    <!-- </div>
+              <div class="col-sm-2">
+                  <input type="number" class="form-control"  formControlName="discountRate1" >
+                  <span *ngIf="!page7Form.get('discountRate1').valid && page7Form.get('discountRate1').touched" class="text-danger">
+                    <span *ngIf="page7Form.get('discountRate1').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                    <span *ngIf="page7Form.get('discountRate1').errors['required']"><small>This field is required!</small></span>
+                  </span>
+  
+              </div>
+              <label for="inputPassword" class="ml-2 col-form-label">%</label> -->
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label ">Eirr:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" formControlName="eirr">
+                            <span *ngIf="!page7Form.get('eirr').valid && page7Form.get('eirr').touched" class="text-danger">
+                      <span *ngIf="page7Form.get('eirr').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                            <span *ngIf="page7Form.get('eirr').errors['required']"><small>This field is required!</small></span>
+                            </span>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">%</label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">B/C 2:</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" class="form-control" formControlName="bcRatio2">
+                            <span *ngIf="!page7Form.get('bcRatio2').valid && page7Form.get('bcRatio2').touched" class="text-danger">
+                <span *ngIf="page7Form.get('bcRatio2').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+<<<<<<< HEAD
+                <span *ngIf="page7Form.get('bcRatio2').errors['required']"><small>This field is required!</small></span>
+              </span>
+            </div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="ml-2 col-form-label">(eg:2,3)</label>
+            </div>
+         </div>
+           
+         <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2">
+            <label for="inputPassword" class="col-sm-auto col-form-label">Discount rate 2:</label>
+            </div>
+         
+            <div class="col-sm-2">
+           <input type="number" class="form-control"  formControlName="discountRate2" >
+           <span *ngIf="!page7Form.get('discountRate2').valid && page7Form.get('discountRate2').touched" class="text-danger">
+             <span *ngIf="page7Form.get('discountRate2').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+             <span *ngIf="page7Form.get('discountRate2').errors['required']"><small>This field is required!</small></span>
+           </span>
+         </div>
+         <div class="col-sm-2">
+         <label for="inputPassword" class="ml-2 col-form-label">%</label>
+         </div>
+      </div>
+        
+    
+        
+        <!-- <div class="col-md-4">
+=======
+                            <span *ngIf="page7Form.get('bcRatio2').errors['required']"><small>This field is required!</small></span>
+                            </span>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">(eg:2,3)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="col-sm-auto col-form-label">Discount rate 2:</label>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <input type="number" class="form-control" formControlName="discountRatio2">
+                            <span *ngIf="!page7Form.get('discountRatio2').valid && page7Form.get('discountRatio2').touched" class="text-danger">
+             <span *ngIf="page7Form.get('discountRatio2').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                            <span *ngIf="page7Form.get('discountRatio2').errors['required']"><small>This field is required!</small></span>
+                            </span>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="inputPassword" class="ml-2 col-form-label">%</label>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="col-md-4">
+>>>>>>> 3f787e0118041d94b7b96d4d88170e888f0095ca
+          <label class="col-md-4 col-form-label">B/C 1:</label>
+          <input type="text" formControlName="bcRatio1">
+          <label>(eg:2,3)</label>
+          <br>
+          <span
+          *ngIf="!page7Form.get('bcRatio1').valid && page7Form.get('bcRatio1').touched"
+          class="help-block">
+          <span *ngIf="page7Form.get('bcRatio1').errors['pattern']">This name is invalid! Please enter a valid number.</span>
+          <span *ngIf="page7Form.get('bcRatio1').errors['required']">This field is required!</span>
+        </span>
+        </div>
+    
+    <br>
+    <div class="form-row">
+        <div class="col-md-6">
+          <label class="col-md-4 col-form-label">Cositng year:</label>
+          <input type="text" placeholder="2000" formControlName="CY">
+          <label>AD</label>
+          <br>
+          <span
+          *ngIf="!page7Form.get('CY').valid && page7Form.get('CY').touched"
+          class="help-block">
+          <span *ngIf="page7Form.get('CY').errors['pattern']">This name is invalid! Please enter a valid number.</span>
+          <span *ngIf="page7Form.get('CY').errors['required']">This field is required!</span>
+        </span>
+        </div>
+        <div class="col-md-6">
+          <label class="col-md-4 col-form-label">Discount rate 1:</label>
+          <input type="text" formControlName="DR">
+          <label>%</label>
+          <br>
+          <span
+          *ngIf="!page7Form.get('DR').valid && page7Form.get('DR').touched"
+          class="help-block">
+          <span *ngIf="page7Form.get('DR').errors['pattern']">This name is invalid! Please enter a valid number.</span>
+          <span *ngIf="page7Form.get('DR').errors['required']">This field is required!</span>
+        </span>
+        </div>
+    </div>
+    <br>
+    <div class="form-row">
+        <div class="col-md-6">
+          <label class="col-md-4 col-form-label">Eirr:</label>
+          <input type="text" formControlName="ER">
+          <label>%</label>
+          <br>
+          <span
+          *ngIf="!page7Form.get('ER').valid && page7Form.get('ER').touched"
+          class="help-block">
+          <span *ngIf="page7Form.get('ER').errors['pattern']">This name is invalid! Please enter a valid number.</span>
+          <span *ngIf="page7Form.get('ER').errors['required']">This field is required!</span>
+        </span>
+        </div>
+        <div class="col-md-6">
+          <label class="col-md-4 col-form-label">B/C 2:</label>
+          <input type="text" formControlName="BC1">
+          <label>(eg:2,3)</label>
+          <br>
+          <span
+          *ngIf="!page7Form.get('BC1').valid && page7Form.get('BC1').touched"
+          class="help-block">
+          <span *ngIf="page7Form.get('BC1').errors['pattern']">This name is invalid! Please enter a valid number.</span>
+          <span *ngIf="page7Form.get('BC1').errors['required']">This field is required!</span>
+        </span>
+        </div>
+    </div>
+    <br>
+    <div class="form-row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+          <label class="col-md-4 col-form-label">Discount rate 2:</label>
+          <input type="text" formControlName="DR1">
+          <label>%</label>
+          <br>
+          <span
+          *ngIf="!page7Form.get('DR1').valid && page7Form.get('DR1').touched"
+          class="help-block">
+          <span *ngIf="page7Form.get('DR1').errors['pattern']">This name is invalid! Please enter a valid number.</span>
+          <span *ngIf="page7Form.get('DR1').errors['required']">This field is required!</span>
+        </span>
+        </div>
+    </div> -->
+                    <br>
+                    <div>
+                        <button class="btn btn-success ml-2 mr-5" type="submit">Submit</button>
+                        <button class="btn btn-primary mr-2" type="button" >Save</button>
+                        <button class="btn btn-primary mr-2" (click)="buttonClicked()">Click to Insert New Row</button>
+                    </div>
+                </fieldset>
+                <br>
+                <br>
+                <fieldset>
+                    <div class="card mb-3">
+                        <!-- <legend class="col-md-3 col-form-label"><h6>Economic Information Table</h6></legend> -->
+                        <legend class="col-md-3 col-form-label">
+                            <h6><span class="badge badge-secondary">Economic Information Table</span></h6>
+                        </legend>
+                        <!-- <div class="card-header">Economic Information Table</div> -->
+                        <div class="card-body table-responsive">
+                            <table class="table table-hover table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Total Project Cost</th>
+                                        <th>B/C 1</th>
+                                        <th>Cositng year</th>
+                                        <th>Discount rate 1</th>
+                                        <th>Eirr</th>
+                                        <th>B/C 2</th>
+                                        <th>Discount rate 2</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr *ngFor="let row of rows">
+                                        <td>{{row.totalProjectCost}}</td>
+                                        <td>{{row.bcRatio1}}</td>
+                                        <td>{{row.costingYear}}</td>
+                                        <td>{{row.discountRate1}}</td>
+                                        <td>{{row.eirr}}</td>
+                                        <td>{{row.bcRatio2}}</td>
+                                        <td>{{row.discountRate2}}</td>
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <br>
+                    <!-- <table sclass="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Project cost</th>
+          <th scope="col">Costing year</th>
+          <th scope="col">Eirr(%)</th>
+          <th scope="col">B/C 1</th>
+          <th scope="col">Discountrate 1(%)</th>
+          <th scope="col">B/C 2</th>
+          <th scope="col">Discount rate 2(%)</th>
+        </tr>
+      </thead>
+         <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+    </table> -->
+                    <br>
+                </fieldset>
+                <br>
+
+                <div class="btn-toolbar">
+                    <div>
+                        <button class="btn btn-success ml-2 mr-4" type="save">Save</button>
+                        <button class="btn btn-primary ml-2 mr-4" type="submit">Submit</button>
+                        <button class="btn ml-2 mr-4" type="fetch">Fetch</button>
+                        <button class="btn btn-info ml-2 mr-4" type="edit">Edit</button>
+                        <button class="btn btn-warning ml-2 mr-4" type="reset">Reset</button>
+                        <button class="btn btn-danger ml-2 mr-4" type="cancel">Cancel</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+
+</div>

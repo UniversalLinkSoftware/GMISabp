@@ -1,0 +1,145 @@
+$topnav-background-color: #0d385b;
+:host {
+    display: block;
+}
+.project-page {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: $topnav-background-color;
+    text-align: center;
+    color: #fff;
+    padding: 3em;
+    .col-lg-4 {
+        padding: 0;
+    }
+    .input-lg {
+        height: 46px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.3333333;
+        border-radius: 0;
+    }
+    .input-underline {
+        background: 0 0;
+        border: none;
+        box-shadow: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        color: #fff;
+        border-radius: 0;
+    }
+    .input-underline:focus {
+        border-bottom: 2px solid #fff;
+        box-shadow: none;
+    }
+    .rounded-btn {
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        color: rgba(255, 255, 255, 0.8);
+        background: $topnav-background-color;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        font-size: 18px;
+        line-height: 40px;
+        padding: 0 25px;
+    }
+    .rounded-btn:hover,
+    .rounded-btn:focus,
+    .rounded-btn:active,
+    .rounded-btn:visited {
+        color: rgba(255, 255, 255, 1);
+        border: 2px solid rgba(255, 255, 255, 1);
+        outline: none;
+    }
+
+    h1 {
+        font-weight: 300;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 36px;
+        small {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    // .form-group {
+    //     padding: 8px 0;
+    //     input::-webkit-input-placeholder {
+    //         color: rgba(255, 255, 255, 0.6) !important;
+    //     }
+
+    //     input:-moz-placeholder {
+    //         /* Firefox 18- */
+    //         color: rgba(255, 255, 255, 0.6) !important;
+    //     }
+
+    //     input::-moz-placeholder {
+    //         /* Firefox 19+ */
+    //         color: rgba(255, 255, 255, 0.6) !important;
+    //     }
+
+    //     input:-ms-input-placeholder {
+    //         color: rgba(255, 255, 255, 0.6) !important;
+    //     }
+    // }
+    .form-content {
+        padding: 40px 0;
+    }
+    .user-avatar {
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+}
+
+
+.nav>a {
+    color: #fff;
+    float: right;
+}
+.my-custom-scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+}
+.table tbody tr td, .table tbody tr th {
+    height: 100%;
+    padding: 18px 10px 0 10px;
+    color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; }
+    
+    .table tbody tr.primary td, .table tbody tr.primary th {
+    background-color: #1f91f3;
+    color: #fff; }
+    
+    .table tbody tr.success td, .table tbody tr.success th {
+    background-color: #2b982b;
+    color: #fff; }
+    
+    .table tbody tr.info td, .table tbody tr.info th {
+    background-color: #00b0e4;
+    color: #fff; }
+    
+    .table tbody tr.warning td, .table tbody tr.warning th {
+    background-color: #ff9600;
+    color: #fff; }
+    
+    .table tbody tr.danger td, .table tbody tr.danger th {
+    background-color: #fb483a;
+    color: #fff; }
+    
+    .table thead tr th {
+      color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #eee; }
+    
+    .table-bordered {
+    border-top: 1px solid #eee; }
+    .table-bordered tbody tr td, .table-bordered tbody tr th {
+      padding: 10px;
+      border: 1px solid #eee; }
+    .table-bordered thead tr th {
+      padding: 10px;
+      border: 1px solid #eee; }

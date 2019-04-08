@@ -1,0 +1,74 @@
+
+<div class="project-page">
+ 
+    <!-- <li class="nav">
+        <a [routerLink]="['/login']" class="nav-link">
+            <i class="fa fa-user"></i> Admin <b class="caret ml-2 mr-4"></b>
+            <i class="fa fa-info-circle"></i> About <b class="caret ml-2 mr-4"></b>
+            <i class="fa fa-question-circle"></i> Help <b class="caret ml-2 mr-4"></b>
+            <i class="fa fa-arrow-left" [routerLink]="['/login']"></i> Go Back <b class="caret ml-2 mr-4"></b>
+        </a>
+    </li> -->
+    
+    <div class="row justify-content-md-center">
+      <div class="col-md-10">
+          <!-- <img src="assets/images/flag.gif" width="150px" class="user-avatar" /> -->
+          <h1>GMIS </h1>
+          </div>
+
+              <div class="form-content">
+                  <button class="btn rounded-btn ml-2 mr-4" (click)="createProject()" >Create Project</button>
+                  <button class="btn rounded-btn ml-2 mr-4" (click)="openProject()" >Search Project</button>
+                <br>
+                <br>
+
+                  <form [formGroup]="projectForm" (ngSubmit)='onSubmit()'>
+                  <div *ngIf="!isCollapsed1" class="form-group">
+                    <div>
+                      <input placeholder="Project Name" type="text" ng-model="name" class="form-control input-underline input-lg" formControlName="name">
+                  </div>
+                  <br>
+                
+                  <div>
+                        <br>
+                    
+                        <button class="btn rounded-btn ml-2 mr-4" type="submit">Create</button>
+                  <button class="btn rounded-btn ml-2 mr-4" (click)="createProject()">Cancel</button>
+                  </div>
+                </div>
+                </form>
+                </div>
+                <br>
+                <div *ngIf="!isCollapsed2" class="form-group">
+
+                
+                    <div class="my-custom-scrollbar">
+
+                        <table class="table col-sm-12">
+                          <thead>
+                            <tr>
+                              <th scope="col">Project id</th>
+                              <th scope="col">Project Name</th>
+                              <!-- <th scope="col">District</th> -->
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let result of projectmgmts">
+                              <td>{{ result.id }}</td>
+                              <td>{{ result.name }}</td>
+                              <!-- <td>{{ data.Project_name }}</td> -->
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                      
+                      </div>
+                      <br>
+                  <button class="btn rounded-btn ml-2 mr-4" (click)="openProject()">Cancel</button>
+                </div>
+              
+      
+    </div>
+   
+</div>
+
