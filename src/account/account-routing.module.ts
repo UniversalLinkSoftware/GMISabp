@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AccountComponent } from './account.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { AccountComponent } from './account.component';
         ])
     ],
     exports: [
-        RouterModule
+        RouterModule,
+        LeafletModule
     ]
 })
 export class AccountRoutingModule { }
