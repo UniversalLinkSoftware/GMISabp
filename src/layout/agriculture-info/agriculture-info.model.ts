@@ -23,24 +23,25 @@ export class Agriculture {
         public agrovetOfficeDistance: number
         ) {}
 }
-// export class ProposedAgriculture {
-//     constructor (
-//         public proposedCropName: string,
-//         public proposedPlantingDate: string,
-//         public proposedPlantingWeek: string,
-//         public proposedCropArea: number,
-//         public proposedHarvestingDate: string,
-//         public proposedHarvestingWeek: string,
-//         public proposedAverageCropYield: number,
-//         public proposedAvgSeed: string,
-//         public proposedAvgDap: number,
-//         public proposedAvgHumanLabour: number,
-//         public proposedAvgOrganicManure: number,
-//         public proposedAvgPotash: number,
-//         public proposedAvgAnimalLabour: number,
-//         public proposedAvgUrea: number,
-//         public proposedAvgMachineLabour: number,
-//         ) {}
+export class ProposedAgriculture {
+    constructor (
+        public proposedCropName: string,
+        public proposedPlantingDate: string,
+        public proposedPlantingWeek: string,
+        public proposedCropArea: number,
+        public proposedHarvestingDate: string,
+        public proposedHarvestingWeek: string,
+        public proposedAverageCropYield: number,
+        public proposedAvgSeed: string,
+        public proposedAvgDap: number,
+        public proposedAvgHumanLabour: number,
+        public proposedAvgOrganicManure: number,
+        public proposedAvgPotash: number,
+        public proposedAvgAnimalLabour: number,
+        public proposedAvgUrea: number,
+        public proposedAvgMachineLabour: number,
+        ) {}
+    }
 // }
 // export class Office {
 //     constructor (

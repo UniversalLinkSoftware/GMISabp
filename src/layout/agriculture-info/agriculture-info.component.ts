@@ -1,8 +1,9 @@
-import { DoiService } from './../../shared/api/doi.service';
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { AgricultureService } from './agriculture.service';
 // import { ExistingAgriculture } from './agriculture-info.model';
 
 @Component({
@@ -34,6 +35,47 @@ export class AgricultureInfoComponent implements OnInit, OnDestroy {
      existingAvgUrea: number,
      existingAvgMachineLabour: number,
      }> = [];
+     public exicost: Array<{
+
+      existingAvgSeed: number,
+      existingAvgDAP: number,
+      existingAvgHumanLabour: number,
+      existingAvgOrganicManure: number,
+      existingAvgPotash: number,
+      existingAvgAnimalLabour: number,
+      existingAvgUrea: number,
+      existingAvgMachineLabour: number,
+      }> = [];
+
+      public proposed: Array<{
+         proposedCropName: string,
+         proposedPlantingDate: string,
+         proposedPlantingWeek: string,
+         proposedCropArea: number,
+         proposedHarvestingDate: string,
+         proposedHarvestingWeek: string,
+         proposedAverageCropYield: number,
+         proposedAvgSeed: string,
+         proposedAvgDap: number,
+         proposedAvgHumanLabour: number,
+         proposedAvgOrganicManure: number,
+         proposedAvgPotash: number,
+         proposedAvgAnimalLabour: number,
+         proposedAvgUrea: number,
+         proposedAvgMachineLabour: number,
+        }> = [];
+
+        public proposedcost: Array<{
+
+          proposedAvgSeed: number,
+          proposedAvgDap: number,
+          proposedAvgHumanLabour: number,
+          proposedAvgOrganicManure: number,
+          proposedAvgPotash: number,
+          proposedAvgAnimalLabour: number,
+          proposedAvgUrea: number,
+          proposedAvgMachineLabour: number,
+          }> = [];
 
      buttonClicked() {
       // tslint:disable-next-line:prefer-const
@@ -67,6 +109,7 @@ export class AgricultureInfoComponent implements OnInit, OnDestroy {
       // tslint:disable-next-line:prefer-const
       let existingAvgMachineLabour = this.page4Form.controls['existingAvgMachineLabour'].value;
 
+
       this.rows.push( {
         existingCropName: existingCropName,
         existingPlantingDate: existingPlantingDate,
@@ -84,9 +127,125 @@ export class AgricultureInfoComponent implements OnInit, OnDestroy {
         existingAvgUrea: existingAvgUrea,
         existingAvgMachineLabour: existingAvgMachineLabour,
          } );
+
       this.page4Form.reset(); }
 
-  constructor(private route: ActivatedRoute , private doiService: DoiService, private router: Router, ) { }
+      costClicked() {
+
+        const existingAvgSeed = this.page4Form.controls['existingAvgSeed'].value;
+        // tslint:disable-next-line:prefer-const
+        let existingAvgDAP = this.page4Form.controls['existingAvgDAP'].value;
+        // tslint:disable-next-line:prefer-const
+        let existingAvgHumanLabour = this.page4Form.controls['existingAvgHumanLabour'].value;
+        // tslint:disable-next-line:prefer-const
+        let existingAvgOrganicManure = this.page4Form.controls['existingPlantingDate'].value;
+        // tslint:disable-next-line:prefer-const
+        let existingAvgPotash = this.page4Form.controls['existingAvgPotash'].value;
+        // tslint:disable-next-line:prefer-const
+        let existingAvgAnimalLabour = this.page4Form.controls['existingAvgAnimalLabour'].value;
+        // tslint:disable-next-line:prefer-const
+        let existingAvgUrea = this.page4Form.controls['existingAvgUrea'].value;
+        // tslint:disable-next-line:prefer-const
+        let existingAvgMachineLabour = this.page4Form.controls['existingAvgMachineLabour'].value;
+        this.exicost.push( {
+
+          existingAvgSeed: existingAvgSeed,
+          existingAvgDAP: existingAvgDAP,
+          existingAvgHumanLabour: existingAvgHumanLabour,
+          existingAvgOrganicManure: existingAvgOrganicManure,
+          existingAvgPotash: existingAvgPotash,
+          existingAvgAnimalLabour: existingAvgAnimalLabour,
+          existingAvgUrea: existingAvgUrea,
+          existingAvgMachineLabour: existingAvgMachineLabour,
+           } );
+           this.page4Form.reset(); }
+
+           proposedClicked() {
+            // tslint:disable-next-line:prefer-const
+            let proposedCropName = this.page4Form.controls['proposedCropName'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedPlantingDate = this.page4Form.controls['proposedPlantingDate'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedPlantingWeek = this.page4Form.controls['proposedPlantingWeek'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedCropArea = this.page4Form.controls['proposedCropArea'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedHarvestingDate = this.page4Form.controls['proposedHarvestingDate'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedHarvestingWeek = this.page4Form.controls['proposedHarvestingWeek'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedAverageCropYield = this.page4Form.controls['proposedAverageCropYield'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedAvgSeed = this.page4Form.controls['proposedAvgSeed'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedAvgDap = this.page4Form.controls['proposedAvgDap'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedAvgHumanLabour = this.page4Form.controls['proposedAvgHumanLabour'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedAvgOrganicManure = this.page4Form.controls['proposedAvgOrganicManure'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedAvgPotash = this.page4Form.controls['proposedAvgPotash'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedAvgAnimalLabour = this.page4Form.controls['proposedAvgAnimalLabour'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedAvgUrea = this.page4Form.controls['proposedAvgUrea'].value;
+            // tslint:disable-next-line:prefer-const
+            let proposedAvgMachineLabour = this.page4Form.controls['proposedAvgMachineLabour'].value;
+
+
+            this.proposed.push( {
+              proposedCropName: proposedCropName,
+              proposedPlantingDate: proposedPlantingDate,
+              proposedPlantingWeek: proposedPlantingWeek,
+              proposedCropArea: proposedCropArea,
+              proposedHarvestingDate: proposedHarvestingDate,
+              proposedHarvestingWeek: proposedHarvestingWeek,
+              proposedAverageCropYield: proposedAverageCropYield,
+              proposedAvgSeed: proposedAvgSeed,
+              proposedAvgDap: proposedAvgDap,
+              proposedAvgHumanLabour: proposedAvgHumanLabour,
+              proposedAvgOrganicManure: proposedAvgOrganicManure,
+              proposedAvgPotash: proposedAvgPotash,
+              proposedAvgAnimalLabour: proposedAvgAnimalLabour,
+              proposedAvgUrea: proposedAvgUrea,
+              proposedAvgMachineLabour: proposedAvgMachineLabour,
+               } );
+
+            this.page4Form.reset(); }
+
+            propcostClicked() {
+
+              // tslint:disable-next-line:prefer-const
+              let proposedAvgSeed = this.page4Form.controls['proposedAvgSeed'].value;
+              // tslint:disable-next-line:prefer-const
+              let proposedAvgDap = this.page4Form.controls['proposedAvgDap'].value;
+              // tslint:disable-next-line:prefer-const
+              let proposedAvgHumanLabour = this.page4Form.controls['proposedAvgHumanLabour'].value;
+              // tslint:disable-next-line:prefer-const
+              let proposedAvgOrganicManure = this.page4Form.controls['proposedAvgOrganicManure'].value;
+              // tslint:disable-next-line:prefer-const
+              let proposedAvgPotash = this.page4Form.controls['proposedAvgPotash'].value;
+              // tslint:disable-next-line:prefer-const
+              let proposedAvgAnimalLabour = this.page4Form.controls['proposedAvgAnimalLabour'].value;
+              // tslint:disable-next-line:prefer-const
+              let proposedAvgUrea = this.page4Form.controls['proposedAvgUrea'].value;
+              // tslint:disable-next-line:prefer-const
+              let proposedAvgMachineLabour = this.page4Form.controls['proposedAvgMachineLabour'].value;
+              this.proposedcost.push( {
+
+                proposedAvgSeed: proposedAvgSeed,
+                proposedAvgDap: proposedAvgDap,
+                proposedAvgHumanLabour: proposedAvgHumanLabour,
+                proposedAvgOrganicManure: proposedAvgOrganicManure,
+                proposedAvgPotash: proposedAvgPotash,
+                proposedAvgAnimalLabour: proposedAvgAnimalLabour,
+                proposedAvgUrea: proposedAvgUrea,
+                proposedAvgMachineLabour: proposedAvgMachineLabour,
+                 } );
+                 this.page4Form.reset(); }
+
+  // tslint:disable-next-line:member-ordering
+  constructor(private route: ActivatedRoute , private agricultureService: AgricultureService, private router: Router, ) { }
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
@@ -103,7 +262,7 @@ export class AgricultureInfoComponent implements OnInit, OnDestroy {
     );
 }
 onSubmit() {
-  this.doiService.save(this.page4Form.value).subscribe(
+  this.agricultureService.save(this.page4Form.value).subscribe(
     result => {
       this.gotoList();
     },
@@ -186,7 +345,7 @@ gotoList() {
     });
 
     if (this.editMode) {
-      this.sub = this.doiService.get(this.id).subscribe((agricultures: any) => {
+      this.sub = this.agricultureService.get(this.id).subscribe((agricultures: any) => {
         const agriculture = agricultures;
         console.log(agriculture);
         if (agriculture) {

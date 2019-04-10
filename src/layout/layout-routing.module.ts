@@ -9,6 +9,7 @@ import { EconomicService } from './economic-info/economic.service';
 import { EngineeringService } from './engineering-info/engineering.service';
 import { LocationService } from './location/location.service';
 import { ToastrService } from 'ngx-toastr';
+import { AgricultureService } from './agriculture-info/agriculture.service';
 
 const routes: Routes = [
     {
@@ -38,6 +39,6 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
     // tslint:disable-next-line:max-line-length
-    providers:[SocialService,ImplementationService,GroundwaterService,ProjectService,EconomicService,EngineeringService,LocationService,ToastrService]
+    providers:[AgricultureService, SocialService,ImplementationService,GroundwaterService,ProjectService,EconomicService,EngineeringService,LocationService,ToastrService]
 })
 export class LayoutRoutingModule {}
