@@ -31,6 +31,8 @@ import { PopupComponent } from 'layout/project-info/popup/popup.component';
 import { MapComponent } from 'layout/engineering-info/map/map.component';
 import { Popup2Component } from 'layout/location/popup2/popup2.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { AccountComponent } from 'account/account.component';
+import { PmapComponent } from 'account/Pmap/pmap.component';
 
 export function appInitializerFactory(injector: Injector,
     platformLocation: PlatformLocation) {
@@ -123,8 +125,9 @@ export const createTranslateLoader = (http: HttpClient) => {
             }
         }),
     ],
+    exports:[LeafletModule],
     declarations: [
-        RootComponent, MapComponent, PopupComponent, Popup2Component,
+        RootComponent, MapComponent, PopupComponent, Popup2Component
     ],
     providers: [
         UserService,

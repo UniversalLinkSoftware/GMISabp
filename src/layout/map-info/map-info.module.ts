@@ -5,7 +5,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MapInfoComponent } from './map-info.component';
 import { MapinfoRoutingModule } from './map-info-routing.module';
-
+import { PmapComponent } from 'account/Pmap/pmap.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 
 
@@ -15,8 +16,11 @@ import { MapinfoRoutingModule } from './map-info-routing.module';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    MapinfoRoutingModule
+    MapinfoRoutingModule,
+    LeafletModule
+    
+    
   ],
-  declarations: [MapInfoComponent]
+  declarations: [MapInfoComponent, PmapComponent]
 })
 export class MapinfoModule { }

@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { circle, geoJSON, icon, latLng, Layer, marker, polygon, tileLayer } from 'leaflet';
 import { LeafletLayersDemoModel } from './layers-demo.model';
 
+
 @Component({
-  selector: 'app-root1',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-pmap',
+  templateUrl: './pmap.component.html',
+  styleUrls: ['./pmap.component.css']
 })
-export class AppComponent {
+export class PmapComponent {
 	LAYER_GOOGLE = {
 		id: 'googlesatellite',
 		name : 'Google Satellite',

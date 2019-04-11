@@ -124,12 +124,12 @@
                         <label class="col-md-auto col-form-label ">Project Status</label>
                     </div>
                     <div class=" form-check form-check-inline">
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" *ngIf="!isCollapsed1" (click)="completed()">
                         <label class="form-check-label" for="inlineCheckbox1">Ongoing</label>
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="form-check form-check-inline">
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" *ngIf="isCollapsed1" (click)="completed()">
                         <label class="form-check-label" for="inlineCheckbox3">Completed</label>
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                       </div>
 
                 
-
+                      <div *ngIf="!isCollapsed1">
                 <div class="form-group row">
                     <div class="col-sm-6">
                         <label class="col-md-auto col-form-label">Other Information:</label>
@@ -265,6 +265,7 @@
                         <label class="col-md-left col-form-label">AD</label>
                     </div>
                 </div>
+            </div>
                 <br>
 
                 <div class="btn-toolbar">

@@ -2,21 +2,24 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+
 import {FormsModule} from '@angular/forms';
+import { PmapComponent } from './pmap.component';
+import { PmapRoutingModule } from './pmap-routing.module';
+
 @NgModule({
   declarations: [
-    AppComponent
+    PmapComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    LeafletModule.forRoot(),
+    PmapRoutingModule,
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  
+
+ 
 })
-export class AppModule { }
+export class PmapModule { }

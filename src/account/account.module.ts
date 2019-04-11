@@ -24,7 +24,9 @@ import { LoginService } from './login/login.service';
 // tenants
 import { TenantChangeComponent } from './tenant/tenant-change.component';
 import { TenantChangeDialogComponent } from './tenant/tenant-change-dialog.component';
-import { AppComponent } from './map/app.component';
+import { PmapComponent } from './Pmap/pmap.component';
+
+
 
 @NgModule({
     imports: [
@@ -46,7 +48,7 @@ import { AppComponent } from './map/app.component';
         // tenant
         TenantChangeComponent,
         TenantChangeDialogComponent,
-        AppComponent
+        PmapComponent
     ],
     providers: [
         LoginService

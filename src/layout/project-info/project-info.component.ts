@@ -23,6 +23,7 @@ export class ProjectInfoComponent implements OnInit, OnDestroy {
   profileForm: FormGroup;
   error: string;
   fileUpload = {status: '', message: '', filePath: ''};
+  isCollapsed1 = true;
 
 
 
@@ -92,6 +93,9 @@ export class ProjectInfoComponent implements OnInit, OnDestroy {
 
   // tslint:disable-next-line:max-line-length
   constructor(private fb: FormBuilder, private modalService: BsModalService, private route: ActivatedRoute , private projectService: ProjectService, private router: Router ) { }
+  completed() {
+    this.isCollapsed1 = !this.isCollapsed1;
+  }
   
   ngOnDestroy() {
     this.sub.unsubscribe();
