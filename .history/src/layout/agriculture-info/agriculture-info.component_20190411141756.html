@@ -1,0 +1,1122 @@
+
+    <div class="jumbotron">
+            <form [formGroup]="page4Form" (ngSubmit)='onSubmit()'>
+                    <div class="card">
+                            <div class="card-header">
+                              <nav class="nav nav-tabs justify-content-center flex-column flex-md-row" role="tablist">
+                                <!-- <nav class="nav nav-tabs" role="tablist"> -->
+                                <a class="nav-link active" href="#ecp" data-toggle="tab">Existing Cropping Pattern</a>
+                                <a class="nav-link" href="#pcp" data-toggle="tab">Proposed Cropping Pattern</a>
+                                <a class="nav-link" href="#office" data-toggle="tab">Neareast Center</a>
+                                
+                              </nav>
+                            </div>
+                            <div class="card-body">
+                                    <div class="tab-content">
+                                    <div class="tab-pane active" id="ecp">
+                                            <fieldset>
+                                                    <legend class="col-md-3 col-form-label">Existing cropping pattern</legend>
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Crop name:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="existingCropName"> 
+                                                <option>Paddy</option>
+                                                <option>Paddy (monsoon)</option> 
+                                                <option>Maize</option>
+                                                <option>Pulse (legume)</option>
+                                                <option>Oil seed</option>
+                                                <option>Wheat</option>
+                                                <option>Potato</option>
+                                              </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                                    </div>
+                                    
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Planting date:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="existingPlantingDate"> 
+                                                <option>January</option>
+                                                <option>February</option> 
+                                                <option>March</option>
+                                                <option>April</option> 
+                                                <option>May</option>
+                                                <option>June</option> 
+                                                <option>July</option>
+                                                <option>August</option> 
+                                                <option>September</option>
+                                                <option>October</option> 
+                                                <option>November</option>
+                                                <option>December</option> 
+                                              </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Planning week:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="existingPlantingWeek"> 
+                                                  <option>First week</option>
+                                                  <option>Second week</option> 
+                                                  <option>Third week</option>
+                                                  <option>Fourth week</option> 
+                                                </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                    
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Crop area:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingCropArea">
+                                                            <span *ngIf="!page4Form.get('existingCropArea').valid && page4Form.get('existingCropArea').touched" class="text-danger">
+                                                <span *ngIf="page4Form.get('existingCropArea').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingCropArea').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">ha</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Harvesting date:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="existingHarvestingDate"> 
+                                                <option>January</option>
+                                                <option>February</option> 
+                                                <option>March</option>
+                                                <option>April</option> 
+                                                <option>May</option>
+                                                <option>June</option> 
+                                                <option>July</option>
+                                                <option>August</option> 
+                                                <option>September</option>
+                                                <option>October</option> 
+                                                <option>November</option>
+                                                <option>December</option> 
+                                              </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Harvesting week:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="existingHarvestingWeek"> 
+                                                  <option>First week</option>
+                                                  <option>Second week</option> 
+                                                  <option>Third week</option>
+                                                  <option>Fourth week</option> 
+                                                </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                    
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Average crop yield:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingAverageCropYield">
+                                                            <span *ngIf="!page4Form.get('existingAverageCropYield').valid && page4Form.get('existingAverageCropYield').touched" class="text-danger">
+                                            <span *ngIf="page4Form.get('existingAverageCropYield').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAverageCropYield').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Ton/ha</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto">Existing Cropping Pattern</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" >
+                                                            <!-- <span *ngIf="!page4Form.get('existingAverageCropYield').valid && page4Form.get('existingAverageCropYield').touched" class="text-danger">
+                                            <span *ngIf="page4Form.get('existingAverageCropYield').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAverageCropYield').errors['required']"><small>This field is required!</small></span>
+                                                            </span> -->
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">%</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <fieldset>
+                                                        <legend class="col-md-2 col-form-label">Average farm input</legend>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Seed:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="existingAvgSeed">
+                                                                <span *ngIf="!page4Form.get('existingAvgSeed').valid && page4Form.get('existingAvgSeed').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('existingAvgSeed').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('existingAvgSeed').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">kg/ha</label>
+                                                            </div>
+                                    
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">DAP:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="existingAvgDAP">
+                                                                <span *ngIf="!page4Form.get('existingAvgDAP').valid && page4Form.get('existingAvgDAP').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('existingAvgDAP').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('existingAvgDAP').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">kg/ha</label>
+                                                            </div>
+                                                        </div>
+                                    
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Human labour:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="existingAvgHumanLabour">
+                                                                <span *ngIf="!page4Form.get('existingAvgHumanLabour').valid && page4Form.get('existingAvgHumanLabour').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('existingAvgHumanLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('existingAvgHumanLabour').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">md/ha</label>
+                                                            </div>
+                                    
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Organic manure:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="existingAvgOrganicManure">
+                                                                <span *ngIf="!page4Form.get('existingAvgOrganicManure').valid && page4Form.get('existingAvgOrganicManure').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('existingAvgOrganicManure').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('existingAvgOrganicManure').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">NRs/ha</label>
+                                                            </div>
+                                                        </div>
+                                    
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Potash:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="existingAvgPotash">
+                                                                <span *ngIf="!page4Form.get('existingAvgPotash').valid && page4Form.get('existingAvgPotash').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('existingAvgPotash').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('existingAvgPotash').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">kg/ha</label>
+                                                            </div>
+                                    
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Animal labour:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="existingAvgAnimalLabour">
+                                                                <span *ngIf="!page4Form.get('existingAvgAnimalLabour').valid && page4Form.get('existingAvgAnimalLabour').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('existingAvgAnimalLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('existingAvgAnimalLabour').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">md/ha</label>
+                                                            </div>
+                                                        </div>
+                                    
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Urea:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="existingAvgUrea">
+                                                                <span *ngIf="!page4Form.get('existingAvgUrea').valid && page4Form.get('existingAvgUrea').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('existingAvgUrea').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('existingAvgUrea').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">kg/ha</label>
+                                                            </div>
+                                    
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Machine labour:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="existingAvgMachineLabour">
+                                                                <span *ngIf="!page4Form.get('existingAvgMachineLabour').valid && page4Form.get('existingAvgMachineLabour').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('existingAvgMachineLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('existingAvgMachineLabour').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">md/ha</label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    
+                                    
+                                                    <br>
+                                    
+                                                    <div class="btn-toolbar">
+                                                        <div>
+                                                            <button class="btn btn-success ml-2 mr-4" type="button" (click)="buttonClicked()">Add</button>
+                                                            <button class="btn btn-danger " type="button">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                    
+                                            
+                                    
+                                                <br>
+                                                <br>
+                                    
+                                                <div class="card-body table-responsive">
+                                                    <table class="table table-hover table table-bordered table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Crop name:</th>
+                                                                <th scope="col">Crop area:</th>
+                                                                <th scope="col">Avg. crop yield:(ton/ha)</th>
+                                                                <th scope="col">Planting date</th>
+                                                                <th scope="col">Harvesing date</th>
+                                                                <th scope="col">Seed(kg/gm)</th>
+                                                                <th scope="col">DAP(kg/ha)</th>
+                                                                <th scope="col">Human labour(md/ha)</th>
+                                                                <th scope="col">Organic manure(NRs/ha)</th>
+                                                                <th scope="col">Potash(kg/ha)</th>
+                                                                <th scope="col">Animal labour(md/ha)</th>
+                                                                <th scope="col">Uread(kg/ha)</th>
+                                                                <th scope="col">Machine labour(md/ha)</th>
+                                    
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr *ngFor="let row of rows">
+                                                                <td>{{row.existingCropName}}</td>
+                                                                <td>{{row.existingCropArea}}</td>
+                                                                <td>{{row.existingAverageCropYield}}</td>
+                                                                <td>{{row.existingPlantingDate}}</td>
+                                                                <td>{{row.existingHarvestingDate}}</td>
+                                                                <td>{{row.existingAvgSeed}}</td>
+                                                                <td>{{row.existingAvgDAP}}</td>
+                                                                <td>{{row.existingAvgHumanLabour}}</td>
+                                                                <td>{{row.existingAvgOrganicManure}}</td>
+                                                                <td>{{row.existingAvgPotash}}</td>
+                                                                <td>{{row.existingAvgAnimalLabour}}</td>
+                                                                <td>{{row.existingAvgUrea}}</td>
+                                                                <td>{{row.existingAvgMachineLabour}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            
+                                                <br>
+                                                <!-- COST START -->
+                                                <fieldset>  
+                                                    <legend class="col-md-2 col-form-label">Average farm input Cost</legend>
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Seed:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingAvgSeed">
+                                                            <span *ngIf="!page4Form.get('existingAvgSeed').valid && page4Form.get('existingAvgSeed').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('existingAvgSeed').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAvgSeed').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                    
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">DAP:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingAvgDAP">
+                                                            <span *ngIf="!page4Form.get('existingAvgDAP').valid && page4Form.get('existingAvgDAP').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('existingAvgDAP').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAvgDAP').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Human labour:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingAvgHumanLabour">
+                                                            <span *ngIf="!page4Form.get('existingAvgHumanLabour').valid && page4Form.get('existingAvgHumanLabour').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('existingAvgHumanLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAvgHumanLabour').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                    
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Organic manure:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingAvgOrganicManure">
+                                                            <span *ngIf="!page4Form.get('existingAvgOrganicManure').valid && page4Form.get('existingAvgOrganicManure').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('existingAvgOrganicManure').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAvgOrganicManure').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Potash:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingAvgPotash">
+                                                            <span *ngIf="!page4Form.get('existingAvgPotash').valid && page4Form.get('existingAvgPotash').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('existingAvgPotash').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAvgPotash').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                    
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Animal labour:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingAvgAnimalLabour">
+                                                            <span *ngIf="!page4Form.get('existingAvgAnimalLabour').valid && page4Form.get('existingAvgAnimalLabour').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('existingAvgAnimalLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAvgAnimalLabour').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Urea:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingAvgUrea">
+                                                            <span *ngIf="!page4Form.get('existingAvgUrea').valid && page4Form.get('existingAvgUrea').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('existingAvgUrea').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAvgUrea').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                    
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Machine labour:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="existingAvgMachineLabour">
+                                                            <span *ngIf="!page4Form.get('existingAvgMachineLabour').valid && page4Form.get('existingAvgMachineLabour').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('existingAvgMachineLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('existingAvgMachineLabour').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-success ml-2 mr-4" type="button" (click)="costClicked()">Add</button>
+                                                
+                                                <!-- COST END -->
+                                                
+                                                <div class="card-body table-responsive">
+                                                    <table class="table table-hover table table-bordered table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                
+                                                                <th scope="col">Seed(Nrs/ha)</th>
+                                                                <th scope="col">DAP(Nrs/ha)</th>
+                                                                <th scope="col">Human labour(Nrs/ha)</th>
+                                                                <th scope="col">Organic manure(Nrs/ha)</th>
+                                                                <th scope="col">Potash(Nrs/ha)</th>
+                                                                <th scope="col">Animal labour(Nrs/ha)</th>
+                                                                <th scope="col">Uread(Nrs/ha)</th>
+                                                                <th scope="col">Machine labour(Nrs/ha)</th>
+                                    
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr *ngFor="let exicosts of exicost">
+                                                                
+                                                                <td>{{exicosts.existingAvgSeed}}</td>
+                                                                <td>{{exicosts.existingAvgDAP}}</td>
+                                                                <td>{{exicosts.existingAvgHumanLabour}}</td>
+                                                                <td>{{exicosts.existingAvgOrganicManure}}</td>
+                                                                <td>{{exicosts.existingAvgPotash}}</td>
+                                                                <td>{{exicosts.existingAvgAnimalLabour}}</td>
+                                                                <td>{{exicosts.existingAvgUrea}}</td>
+                                                                <td>{{exicosts.existingAvgMachineLabour}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                   
+                                                </div>
+                                                </fieldset>
+                                                </fieldset>
+                                    </div>
+                                    <div class="tab-pane" id="pcp">
+                                            <fieldset>
+                                                    <legend class="col-md-3 col-form-label">Proposed cropping pattern</legend>
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Crop name:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="proposedCropName"> 
+                                                  <option>Paddy</option>
+                                                  <option>Paddy (monsoon)</option> 
+                                                  <option>Maize</option>
+                                                  <option>Pulse (legume)</option>
+                                                  <option>Oil seed</option>
+                                                  <option>Wheat</option>
+                                                  <option>Potato</option>
+                                                </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                                    </div>
+                                    
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Planting date:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="proposedPlantingDate"> 
+                                                  <option>January</option>
+                                                  <option>February</option> 
+                                                  <option>March</option>
+                                                  <option>April</option> 
+                                                  <option>May</option>
+                                                  <option>June</option> 
+                                                  <option>July</option>
+                                                  <option>August</option> 
+                                                  <option>September</option>
+                                                  <option>October</option> 
+                                                  <option>November</option>
+                                                  <option>December</option> 
+                                                </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Planning week:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="proposedPlantingWeek"> 
+                                                    <option>First week</option>
+                                                    <option>Second week</option> 
+                                                    <option>Third week</option>
+                                                    <option>Fourth week</option> 
+                                                  </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                    
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Crop area:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedCropArea">
+                                                            <span *ngIf="!page4Form.get('proposedCropArea').valid && page4Form.get('proposedCropArea').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedCropArea').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedCropArea').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">ha</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Harvesting date:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="proposedHarvestingDate"> 
+                                                  <option>January</option>
+                                                  <option>February</option> 
+                                                  <option>March</option>
+                                                  <option>April</option> 
+                                                  <option>May</option>
+                                                  <option>June</option> 
+                                                  <option>July</option>
+                                                  <option>August</option> 
+                                                  <option>September</option>
+                                                  <option>October</option> 
+                                                  <option>November</option>
+                                                  <option>December</option> 
+                                                </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Harvesting week:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" formControlName="proposedHarvestingWeek"> 
+                                                    <option>First week</option>
+                                                    <option>Second week</option> 
+                                                    <option>Third week</option>
+                                                    <option>Fourth week</option> 
+                                                  </select>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                    
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Average crop yield:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedAverageCropYield">
+                                                            <span *ngIf="!page4Form.get('proposedAverageCropYield').valid && page4Form.get('proposedAverageCropYield').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAverageCropYield').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAverageCropYield').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Ton/ha</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto">Proposed Cropping Intensity:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control">
+                                                            <!-- <span *ngIf="!page4Form.get('proposedAverageCropYield').valid && page4Form.get('proposedAverageCropYield').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAverageCropYield').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAverageCropYield').errors['required']"><small>This field is required!</small></span>
+                                                            </span> -->
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">%</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <fieldset>
+                                                        <legend class="col-md-2 col-form-label">Average farm input</legend>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Seed:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="proposedAvgSeed">
+                                                                <span *ngIf="!page4Form.get('proposedAvgSeed').valid && page4Form.get('proposedAvgSeed').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAvgSeed').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('proposedAvgSeed').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">kg/ha</label>
+                                                            </div>
+                                    
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">DAP:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="proposedAvgDap">
+                                                                <span *ngIf="!page4Form.get('proposedAvgDap').valid && page4Form.get('proposedAvgDap').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAvgDap').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('proposedAvgDap').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">kg/ha</label>
+                                                            </div>
+                                                        </div>
+                                    
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Human labour:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="proposedAvgHumanLabour">
+                                                                <span *ngIf="!page4Form.get('proposedAvgHumanLabour').valid && page4Form.get('proposedAvgHumanLabour').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAvgHumanLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('proposedAvgHumanLabour').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">md/ha</label>
+                                                            </div>
+                                    
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Organic manure:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="proposedAvgOrganicManure">
+                                                                <span *ngIf="!page4Form.get('proposedAvgOrganicManure').valid && page4Form.get('proposedAvgOrganicManure').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAvgOrganicManure').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('proposedAvgOrganicManure').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">NRs/ha</label>
+                                                            </div>
+                                                        </div>
+                                    
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Potash:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="proposedAvgPotash">
+                                                                <span *ngIf="!page4Form.get('proposedAvgPotash').valid && page4Form.get('proposedAvgPotash').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAvgPotash').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('proposedAvgPotash').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">kg/ha</label>
+                                                            </div>
+                                    
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Animal labour:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="proposedAvgAnimalLabour">
+                                                                <span *ngIf="!page4Form.get('proposedAvgAnimalLabour').valid && page4Form.get('proposedAvgAnimalLabour').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAvgAnimalLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('proposedAvgAnimalLabour').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">md/ha</label>
+                                                            </div>
+                                                        </div>
+                                    
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Urea:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="proposedAvgUrea">
+                                                                <span *ngIf="!page4Form.get('proposedAvgUrea').valid && page4Form.get('proposedAvgUrea').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAvgUrea').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('proposedAvgUrea').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">kg/ha</label>
+                                                            </div>
+                                    
+                                    
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-sm-auto col-form-label">Machine labour:</label>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" formControlName="proposedAvgMachineLabour">
+                                                                <span *ngIf="!page4Form.get('proposedAvgMachineLabour').valid && page4Form.get('proposedAvgMachineLabour').touched" class="text-danger">
+                                                  <span *ngIf="page4Form.get('proposedAvgMachineLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                                <span *ngIf="page4Form.get('proposedAvgMachineLabour').errors['required']"><small>This field is required!</small></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <label for="inputPassword" class="col-form-label">md/ha</label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    
+                                    
+                                                    <br>
+                                    
+                                                    <div class="btn-toolbar">
+                                                        <div>
+                                                            <button class="btn btn-success ml-2 mr-4" type="button" (click)="proposedClicked()">Add</button>
+                                                            <button class="btn btn-danger " type="button">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                    
+                                            
+                                    
+                                                <br>
+                                                <br>
+                                    
+                                                <div class="card-body table-responsive">
+                                                    <table class="table table-hover table table-bordered table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Crop name:</th>
+                                                                <th scope="col">Planting Date:</th>
+                                                                <th scope="col">Planting Week</th>
+                                                                
+                                                                <th scope="col">Crop Area</th>
+                                                                <th scope="col">Harvesting Date</th>
+                                                                <th scope="col">HarvestingWeek</th>
+                                                                <th scope="col">AverageCropYield</th>
+                                                                <th scope="col">AvgSeed)</th>
+                                                                <th scope="col">AvgDap</th>
+                                                                <th scope="col">HumanLabour</th>
+                                                                <th scope="col">OrganicManure</th>
+                                                                <th scope="col">Potash</th>
+                                                                <th scope="col">AnimalLabour</th>
+                                                                <th scope="col">AvgUrea</th>
+                                                                <th scope="col">MachineLabour</th>
+                                                                
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr *ngFor="let proposeds of proposed">
+                                                                <td>{{proposeds.proposedCropName}}</td>
+                                                                <td>{{proposeds.proposedPlantingDate}}</td>
+                                                                <td>{{proposeds.proposedPlantingWeek}}</td>
+                                                                <td>{{proposeds.proposedCropArea}}</td>
+                                                                <td>{{proposeds.proposedHarvestingDate}}</td>
+                                                                <td>{{proposeds.proposedHarvestingWeek}}</td>
+                                                                <td>{{proposeds.proposedAverageCropYield}}</td>
+                                                                <td>{{proposeds.proposedAvgSeed}}</td>
+                                                              
+                                                                <td>{{proposeds.proposedAvgHumanLabour}}</td>
+                                                                <td>{{proposeds.proposedAvgOrganicManure}}</td>
+                                                                <td>{{proposeds.proposedAvgPotash}}</td>
+                                                                <td>{{proposeds.proposedAvgAnimalLabour}}</td>
+                                                                <td>{{proposeds.proposedAvgUrea}}</td>
+                                                                <td>{{proposeds.proposedAvgMachineLabour}}</td>
+                                                            </tr>
+                                                            
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                
+                                                <br>
+                                                 <!-- COST START -->
+                                                 <fieldset>
+                                                    <legend class="col-md-2 col-form-label">Average farm input Cost</legend>
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Seed:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedAvgSeed">
+                                                            <span *ngIf="!page4Form.get('proposedAvgSeed').valid && page4Form.get('proposedAvgSeed').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('proposedAvgSeed').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAvgSeed').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                    
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">DAP:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedAvgDap">
+                                                            <span *ngIf="!page4Form.get('proposedAvgDap').valid && page4Form.get('proposedAvgDap').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('proposedAvgDap').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAvgDap').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Human labour:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedAvgHumanLabour">
+                                                            <span *ngIf="!page4Form.get('proposedAvgHumanLabour').valid && page4Form.get('proposedAvgHumanLabour').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('proposedAvgHumanLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAvgHumanLabour').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                    
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Organic manure:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedAvgOrganicManure">
+                                                            <span *ngIf="!page4Form.get('proposedAvgOrganicManure').valid && page4Form.get('proposedAvgOrganicManure').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('proposedAvgOrganicManure').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAvgOrganicManure').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Potash:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedAvgPotash">
+                                                            <span *ngIf="!page4Form.get('proposedAvgPotash').valid && page4Form.get('proposedAvgPotash').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('proposedAvgPotash').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAvgPotash').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                    
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Animal labour:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedAvgAnimalLabour">
+                                                            <span *ngIf="!page4Form.get('proposedAvgAnimalLabour').valid && page4Form.get('proposedAvgAnimalLabour').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('proposedAvgAnimalLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAvgAnimalLabour').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Urea:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedAvgUrea">
+                                                            <span *ngIf="!page4Form.get('proposedAvgUrea').valid && page4Form.get('proposedAvgUrea').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('proposedAvgUrea').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAvgUrea').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                    
+                                    
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Machine labour:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="proposedAvgMachineLabour">
+                                                            <span *ngIf="!page4Form.get('proposedAvgMachineLabour').valid && page4Form.get('proposedAvgMachineLabour').touched" class="text-danger">
+                                              <span *ngIf="page4Form.get('proposedAvgMachineLabour').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('proposedAvgMachineLabour').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">Nrs/ha</label>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-success ml-2 mr-4" type="button" (click)="propcostClicked()">Add</button>
+                                            
+                                                <!-- COST END -->
+                                                <div class="card-body table-responsive">
+                                                    <table class="table table-hover table table-bordered table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                
+                                                                <th scope="col">Seed(Nrs/ha)</th>
+                                                                <th scope="col">DAP(Nrs/ha)</th>
+                                                                <th scope="col">Human labour(Nrs/ha)</th>
+                                                                <th scope="col">Organic manure(Nrs/ha)</th>
+                                                                <th scope="col">Potash(Nrs/ha)</th>
+                                                                <th scope="col">Animal labour(Nrs/ha)</th>
+                                                                <th scope="col">Uread(Nrs/ha)</th>
+                                                                <th scope="col">Machine labour(Nrs/ha)</th>
+                                    
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr *ngFor="let purcosts of proposedcost">
+                                                                
+                                                                <td>{{purcosts.proposedAvgSeed}}</td>
+                                                                <td>{{purcosts.proposedAvgDap}}</td>
+                                                                <td>{{purcosts.proposedAvgHumanLabour}}</td>
+                                                                <td>{{purcosts.proposedAvgOrganicManure}}</td>
+                                                                <td>{{purcosts.proposedAvgPotash}}</td>
+                                                                <td>{{purcosts.proposedAvgAnimalLabour}}</td>
+                                                                <td>{{purcosts.proposedAvgUrea}}</td>
+                                                                <td>{{purcosts.proposedAvgMachineLabour}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    
+                                                </div>
+                                                </fieldset>
+                                                </fieldset>
+                                        </div>
+                                        <div class="tab-pane" id="office">
+                                            <fieldset>
+                                                <legend>Neareast Center</legend>
+                                                <br>
+                                                <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto">Neareast agriculture extension office:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="NeareastAgricultureExtensionOffice">
+                                                            <span *ngIf="!page4Form.get('NeareastAgricultureExtensionOffice').valid && page4Form.get('NeareastAgricultureExtensionOffice').touched" class="text-danger">
+                                                      <span *ngIf="page4Form.get('NeareastAgricultureExtensionOffice').errors['pattern']"><small>This is invalid! please enter text!</small></span>
+                                                            <span *ngIf="page4Form.get('NeareastAgricultureExtensionOffice').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                        
+                                        
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Distance:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="extensionOfficeDistance">
+                                                            <span *ngIf="!page4Form.get('extensionOfficeDistance').valid && page4Form.get('extensionOfficeDistance').touched" class="text-danger">
+                                                      <span *ngIf="page4Form.get('extensionOfficeDistance').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('extensionOfficeDistance').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">km</label>
+                                                        </div>
+                                                    </div>
+                                        
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto">Neareast agrovet office:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="neareastAgrovetOffice">
+                                                            <span *ngIf="!page4Form.get('neareastAgrovetOffice').valid && page4Form.get('neareastAgrovetOffice').touched" class="text-danger">
+                                                      <span *ngIf="page4Form.get('neareastAgrovetOffice').errors['pattern']"><small>This is invalid! please enter text!</small></span>
+                                                            <span *ngIf="page4Form.get('neareastAgrovetOffice').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                        
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label"></label>
+                                                        </div>
+                                        
+                                        
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-sm-auto col-form-label">Distance:</label>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" formControlName="agrovetOfficeDistance">
+                                                            <span *ngIf="!page4Form.get('agrovetOfficeDistance').valid && page4Form.get('agrovetOfficeDistance').touched" class="text-danger">
+                                                      <span *ngIf="page4Form.get('agrovetOfficeDistance').errors['pattern']"><small>This is invalid! please enter number!</small></span>
+                                                            <span *ngIf="page4Form.get('agrovetOfficeDistance').errors['required']"><small>This field is required!</small></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label for="inputPassword" class="col-form-label">km</label>
+                                                        </div>
+                                                    </div>
+                                        
+                                                    
+                                            </fieldset>
+                                            </div>
+                                    </div>
+                            </div>
+                            <br>
+                            <div class="btn-toolbar">
+                                <div>
+                                    <button class="btn btn-success ml-2 mr-4" type="save">Save</button>
+                                    <button class="btn btn-primary ml-2 mr-4" type="submit">Submit</button>
+                                    
+                                    <button class="btn btn-danger ml-2 mr-4" type="cancel">Cancel</button>
+                                </div>
+                            </div>
+                            <br>
+        </div>
+        </form>
+    </div>
+    

@@ -1,0 +1,13 @@
+    <div class="user-info">
+    <div class="info-container">
+        <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{shownLoginName}}</div>
+        <div class="email">{{appSession.user.emailAddress}}</div>
+        
+    </div>
+            
+    
+                <li><a [routerLink]="['/app/update-password']"><i class="material-icons">lock</i>Update Password</a></li>
+                <li><a (click)="logout()"><i class="material-icons">input</i>{{ 'Logout' | localize }}</a></li>
+            
+    
+</div>

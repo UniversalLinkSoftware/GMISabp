@@ -1,0 +1,67 @@
+#header{
+    margin :0px;
+    height: 200px;
+    width:100%;
+    position: relative;
+   
+}
+@media screen and (max-width: 992px) {
+    #header{
+        display: none;
+    }
+}
+
+.img-responsive{
+    height: 100%;
+    width: 100%;
+}
+
+.img-2{
+    width: 130px;  
+    height: 135px; 
+    position: absolute;
+    top: 15%;
+    left: 87%;
+    
+    
+}
+$topnav-background-color: #0d385b;
+:host {
+    .navbar {
+        height: 80px;
+        position: relative;
+        background-color: $topnav-background-color;
+        .navbar-brand {
+            color: #fff;
+        }
+        .nav-item>a {
+            color: #fff;
+            &:hover {
+                color: #02bfe7;
+            }
+        }
+    }
+    .messages {
+        width: 300px;
+        .media {
+            border-bottom: 1px solid #ddd;
+            padding: 5px 10px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .media-body {
+            h5 {
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .small {
+                margin: 0;
+            }
+            .last {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+}

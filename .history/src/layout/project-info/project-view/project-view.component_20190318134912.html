@@ -1,0 +1,178 @@
+<h1>This is the view component</h1>
+<div *ngFor="let projects of project">
+  <h3>
+      <a [routerLink]="['projectinfo-edit/', projects.id]">
+        <button type="submit" class="btn btn-primary">Edit</button></a>
+      <button class="btn btn-info ml-2 mr-4" (click)="captureScreen()" >Print</button>
+  </h3>
+  <div id="home">
+    <div class="jumbotron">
+        <fieldset>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Sub-Project Name:</label>
+                    </div>
+                    <div class="col-sm-8 col-md-auto col-form-label">
+                      {{projects.subProjectName}}
+
+                    </div>
+                    <div class="col-sm-2">
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Command Area:</label>
+                    </div>
+                    <div class="col-md-auto col-form-label">GCA</div>
+                    <div class="col-sm-2 col-md-auto col-form-label">
+                       {{projects.commandAreagca}}
+
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="col-md-left col-form-label">ha</label>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">NCA</label>
+                    </div>
+                    <div class="col-sm-2 col-md-auto col-form-label">
+                      {{projects.commandAreanca}}
+
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="col-md-left col-form-label">ha</label>
+                    </div>
+
+                </div>
+
+                <div class="form-group col-12">
+                    <fieldset>
+                        <legend class="col-md-3 col-form-label">Management System</legend>
+
+                        <div class="col-sm-2 col-md-auto col-form-label">
+                            {{projects.mgmtSystemOthers}}
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-sm-auto col-form-label">Program:</label>
+                    </div>
+                    <div class="col-sm-2 col-md-auto col-form-label">
+                    {{projects.program}}
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+
+                    </div>
+
+                </div>
+
+                <div class="form-group row ">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label ">Sub Project Type:</label>
+                    </div>
+                    <div class="col-md-3 col-md-auto col-form-label">
+                        {{projects.subProjectType}}
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Status of Project:</label>
+                    </div>
+                    <div class="col-sm-8 col-md-auto col-form-label">
+                       {{projects.statusOfProject}}
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Sub Project Comment:</label>
+                    </div>
+                    <div class="col-8 col-md-auto col-form-label">
+                      {{projects.commandAreagca}}
+                    </div>
+
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Other Information:</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Prepared By:</label>
+                    </div>
+                    <div class="col-sm-2 col-md-auto col-form-label">
+                      {{projects.preparedBy}}
+
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="col-md-auto">Recommended By:</label>
+                    </div>
+                    <div class="col-sm-2 col-md-auto col-form-label">
+                      {{projects.recomendedBy}}
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Approved By:</label>
+                    </div>
+                    <div class="col-sm-2 col-md-auto col-form-label">
+                      {{projects.approvedBy}}
+
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label ml-1">Approved Date:</label>
+                    </div>
+                    <div class="col-sm-2 col-md-auto col-form-label">
+                        {{projects.approvedDate}}
+
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">Start Date:</label>
+                    </div>
+                    <div class="col-sm-2 col-md-auto col-form-label">
+                      {{projects.startDate}}
+
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="col-md-left col-form-label">AD</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="col-md-auto col-form-label">End Date:</label>
+                    </div>
+                    <div class="col-sm-2 col-md-auto col-form-label">
+                      {{projects.endDate}}
+
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="col-md-left col-form-label">AD</label>
+                    </div>
+                </div>
+
+                <br>
+        </fieldset>
+    </div>
+</div>
+
+
+</div>
+

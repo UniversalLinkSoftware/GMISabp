@@ -1,0 +1,17 @@
+    <div class="user-info">
+    <div class="info-container">
+            <img src="assets/images/user.png" width="48" height="48" alt="User" />
+        <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{shownLoginName}}</div>
+        <div class="email">{{appSession.user.emailAddress}}</div>
+        
+    </div>
+            <br>
+            <br>
+    <div class="row">
+        <div class="redropdown">
+                <a [routerLink]="['/app/update-password']" style="margin: 10px; text-decoration: none; color: white;">Update Password</a>
+                <a (click)="logout()" style="margin: 10px;">{{ 'Logout' | localize }}</a>
+        </div>
+    </div>
+    
+</div>

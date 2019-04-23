@@ -1,0 +1,632 @@
+<div *ngFor="let groundwaters of groundwater">
+  <div id='a'>
+<div class="jumbotron">
+  <fieldset>
+    <br>
+    <div class="form-group row">
+        <label class="col-sm-auto col-form-label">Tubewell no:</label>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.tubewellNo}}</label>
+        </div>
+    </div>
+    <br>
+    <fieldset>
+        <legend class="col-md-2 col-form-label">Tubewell Information</legend>
+        <div class="form-group row">
+          <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">Location:</label>
+          </div>
+          <div class="col-sm-2">
+            <label class="col-sm-auto col-form-label">{{groundwaters.location}}</label>
+          </div>
+          <div class="col-sm-2">
+          <label  class="ml-2 col-form-label"></label>
+          </div>
+
+          
+          <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">Aquifer material:</label>
+          </div>
+          <div class="col-sm-2">
+            <label class="col-sm-auto col-form-label">{{groundwaters.aquiferMaterial}}</label>
+          </div>
+          <div class="col-sm-2" >
+          <label class="col-form-label"></label>
+          </div>
+       </div>
+
+       <div class="form-group row">
+          <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">Latitude:</label>
+          </div>
+          <div class="col-sm-2">
+            <label class="col-sm-auto col-form-label">{{groundwaters.latitude}}</label>
+          </div>
+
+          <div class="col-sm-2">
+          <label  class="col-form-label"><small>decimal degree</small></label>
+          </div>
+
+          
+          <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">Total drill depth:</label>
+          </div>
+          <div class="col-sm-2">
+            <label class="col-sm-auto col-form-label">{{groundwaters.totalDrillDepth}}</label>
+          </div>
+          <div class="col-sm-2">
+          <label class="ml-2 col-form-label">m</label>
+          </div>
+       </div>
+
+       <div class="form-group row">
+        <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">Longtitude:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.longtitude}}</label>
+        </div>
+
+        <div class="col-sm-2">
+        <label  class="col-form-label"><small>decimal degree</small></label>
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">Housing length:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.housingLength}}</label>
+        </div>
+        <div class="col-sm-2">
+        <label class="ml-2 col-form-label">m</label>
+        </div>
+     </div>
+
+     <div class="form-group row">
+      <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">Elevation:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.elevation}}</label>
+      </div>
+
+      <div class="col-sm-2">
+      <label  class="col-form-label">masl</label>
+      </div>
+
+      
+      <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">Screen length:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.screenLength}}</label>
+      </div>
+      <div class="col-sm-2">
+      <label class="ml-2 col-form-label">m</label>
+      </div>
+   </div>
+
+   <div class="form-group row">
+    <div class="col-sm-2">
+    <label class="col-sm-auto col-form-label">Type of tubewells:</label>
+    </div>
+    <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">{{groundwaters.typeOfTubewell}}</label>
+    </div>
+
+    <div class="col-sm-2">
+    <label  class="col-form-label"></label>
+    </div>
+
+    
+    <div class="col-sm-2">
+    <label class="col-sm-auto col-form-label">Type of screen:</label>
+    </div>
+    <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">{{groundwaters.typeOfScreen}}</label>
+    </div>
+
+    <div class="col-sm-2">
+    <label class="ml-2 col-form-label"></label>
+    </div>
+ </div>
+
+ <div class="form-group row">
+  <div class="col-sm-2">
+  <label class="col-sm-auto">Tubewell housing pipe size:</label>
+  </div>
+  <div class="col-sm-2">
+    <label class="col-sm-auto col-form-label">{{groundwaters.tubewellHousingPipeSize}}</label>
+  </div>
+  <div class="col-sm-2">
+  <label  class="col-form-label">mm</label>
+  </div>
+
+  
+  <div class="col-sm-2">
+  <label class="col-sm-auto col-form-label">Pumping discharge:</label>
+  </div>
+  <div class="col-sm-2">
+    <label class="col-sm-auto col-form-label">{{groundwaters.pumpingDischarge}}</label>
+  </div>
+  <div class="col-sm-2">
+  <label class="ml-2 col-form-label">lps</label>
+  </div>
+</div>
+
+<div class="form-group row">
+<div class="col-sm-2">
+<label class="col-sm-auto">Tubewell screen and casing pipe size:</label>
+</div>
+<div class="col-sm-2">
+  <label class="col-sm-auto col-form-label">{{groundwaters.tubewellScreenAndCasingPipeSize}}</label>
+</div>
+
+<div class="col-sm-2">
+<label  class="col-form-label">mm</label>
+</div>
+
+
+<div class="col-sm-2">
+<label class="col-sm-auto col-form-label">Drawdown:</label>
+</div>
+<div class="col-sm-2">
+  <label class="col-sm-auto col-form-label">{{groundwaters.drawdown}}</label>
+</div>
+<div class="col-sm-2">
+<label class="ml-2 col-form-label">m</label>
+</div>
+</div>
+
+<div class="form-group row">
+<div class="col-sm-2">
+<label class="col-sm-auto col-form-label">Static water level:</label>
+</div>
+<div class="col-sm-2">
+  <label class="col-sm-auto col-form-label">{{groundwaters.staticWaterLevel}}</label>
+</div>
+
+<div class="col-sm-2">
+<label  class="col-form-label">m</label>
+</div>
+
+
+<div class="col-sm-2">
+<label class="col-sm-auto">Aquifer storage coefficient:</label>
+</div>
+<div class="col-sm-2">
+  <label class="col-sm-auto col-form-label">{{groundwaters.aquiferStorageCoefficient}}</label>
+</div><div class="col-sm-2">
+<label class="ml-2 col-form-label"></label>
+</div>
+</div>
+
+<div class="form-group row">
+<div class="col-sm-2">
+<label class="col-sm-auto col-form-label"></label>
+</div>
+<div class="col-sm-2">
+</div>
+
+<div class="col-sm-2">
+<label  class="col-form-label"></label>
+</div>
+
+
+<div class="col-sm-2">
+<label class="col-sm-auto">Aquifer transmissitivity:</label>
+</div>
+<div class="col-sm-2">
+  <label class="col-sm-auto col-form-label">{{groundwaters.aquiferTransmissivity}}</label>
+</div>
+<div class="col-sm-2">
+<label class="ml-2 col-form-label">m/day</label>
+</div>
+</div>
+
+
+    </fieldset>
+
+    <br>
+
+    <!-- End of Tubewell information -->
+
+    <br>
+
+    <fieldset>
+      <legend class="col-md-2 col-form-label">Pump Information</legend>
+      <div class="form-group row">
+        <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label"></label>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-2">
+        <label  class="ml-2 col-form-label"></label>
+        </div>
+
+        
+        <div class="col-sm-6">
+        <label class="col-form-label"><h5><b>Pump house information</b></h5></label>
+        </div>
+     </div>
+
+     <div class="form-group row">
+        <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">Brand of pump:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.brandOfPump}}</label>
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label class="col-sm-auto">Size of pump house: (lxbxh)</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.sizeOfPumpHouse}}</label>
+        </div>
+        <div class="col-sm-2">
+        <label class="ml-2 col-form-label">mxmxm</label>
+        </div>
+     </div>
+
+     <div class="form-group row">
+      <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">Power:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.power}}</label>
+      </div>
+
+      <div class="col-sm-2">
+      <label  class="col-form-label">HP</label>
+      </div>
+
+      
+      <div class="col-sm-2">
+      <label class="col-sm-auto">Height of overhead tank:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.heightOfOverheadTank}}</label>
+      </div>
+      <div class="col-sm-2">
+      <label class="ml-2 col-form-label">m</label>
+      </div>
+   </div>
+
+   <div class="form-group row">
+    <div class="col-sm-2">
+    <label class="col-sm-auto col-form-label">Head:</label>
+    </div>
+    <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">{{groundwaters.head}}</label>
+    </div>
+
+    <div class="col-sm-2">
+    <label  class="col-form-label">m</label>
+    </div>
+
+    
+    <div class="col-sm-2">
+    <label class="col-sm-auto">Volume of overhead tank:</label>
+    </div>
+    <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">{{groundwaters.volumeOfOverheadTank}}</label>
+    </div>
+    <div class="col-sm-2">
+    <label class="ml-2 col-form-label">cu.m</label>
+    </div>
+ </div>
+
+ <div class="form-group row">
+  <div class="col-sm-2">
+    <label class="col-sm-auto">Pump discharge:</label>
+    </div>
+    <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">{{groundwaters.pumpDischarge}}</label>
+    </div>
+    <div class="col-sm-2">
+    <label class="ml-2 col-form-label">lps</label>
+    </div>
+
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-2">
+  </div>
+ </div>
+
+  
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label class="col-sm-auto">Efficiency of motor:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.efficiencyOfMotor}}</label>
+      </div>
+      <div class="col-sm-2">
+      <label class="ml-2 col-form-label">%</label>
+      </div>
+
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label class="col-sm-auto">Efficiency of pump:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.efficiencyOfPump}}</label>
+      </div>
+      <div class="col-sm-2">
+      <label class="ml-2 col-form-label">%</label>
+      </div>
+
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label class="col-sm-auto">Pump lowering depth:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.pumpLoweringDepth}}</label>
+      </div>
+      <div class="col-sm-2">
+      <label class="ml-2 col-form-label">m</label>
+      </div>
+
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label class="col-sm-auto">Column pipe size:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.columnPipeSize}}</label>
+      </div>
+      <div class="col-sm-2">
+      <label class="ml-2 col-form-label">mm</label>
+      </div>
+
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+    <label class="col-sm-auto col-form-label">Column type:</label>
+    </div>
+    <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">{{groundwaters.columnType}}</label>
+    </div>
+    <div class="col-sm-2">
+    </div>
+
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+    </fieldset>
+
+    <br>
+
+    <!-- End of Pump information -->
+
+    <br>
+
+    <fieldset>
+      <legend class="col-md-2 col-form-label">Electrification</legend>
+      <div class="form-group row">
+        <div class="col-sm-2">
+        <label class="col-sm-auto">Length of 11KV HT transmission line:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.lengthOf11kvHTTransmissionLine}}</label>
+        </div>
+        <div class="col-sm-2">
+        <label  class="ml-2 col-form-label">m</label>
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label class="col-sm-auto">Transformer capacity:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.transformerCapacity}}</label>
+        </div>
+        <div class="col-sm-2">
+        <label class="col-form-label">KVA</label>
+        </div>
+     </div>
+
+     <div class="form-group row">
+        <div class="col-sm-2">
+        <label class="col-sm-auto">440 V lt transiossion line:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.transmissionLine}}</label>
+        </div>
+
+        <div class="col-sm-2">
+        <label  class="col-form-label">m</label>
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">Control panell:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.controlPanel}}</label>
+        </div>
+        <div class="col-sm-2">
+        <label class="ml-2 col-form-label">HP</label>
+        </div>
+     </div>
+
+     <div class="form-group row">
+      <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">No. of poles:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.noOfPoles}}</label>
+      </div>
+
+      <div class="col-sm-2">
+      <label  class="col-form-label"></label>
+      </div>
+
+      
+      <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">Voltage stabilizer:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.volatageStabilizer}}</label>
+      </div>
+      <div class="col-sm-2">
+      <label class="ml-2 col-form-label">KVA</label>
+      </div>
+    </div>
+
+    </fieldset>
+
+    <br>
+
+    <!-- End of electrification -->
+
+    <br>
+
+    <fieldset>
+      <legend class="col-md-2 col-form-label">Distribution system</legend>
+      <div class="form-group row">
+        <div class="col-sm-2">
+        <label class="col-sm-auto">Type of distribution system:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.typeOfDistributionSystem}}</label>
+        </div>
+
+        <div class="col-sm-2">
+        <label  class="col-form-label"></label>
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label class="col-sm-auto">No. of outlets:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.noOfOutlets}}</label>
+        </div>
+        <div class="col-sm-2">
+        <label class="col-form-label"></label>
+        </div>
+     </div>
+
+     <div class="form-group row">
+        <div class="col-sm-2">
+        <label class="col-sm-auto">Length of open channel:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.lengthOfOpenChannel}}</label>
+        </div>
+
+        <div class="col-sm-2">
+        <label  class="col-form-label">m</label>
+        </div>
+
+        
+        <div class="col-sm-2">
+        <label class="col-sm-auto">Size of alpha-alpha valve:</label>
+        </div>
+        <div class="col-sm-2">
+          <label class="col-sm-auto col-form-label">{{groundwaters.sizeOfAlphaAlphaValve}}</label>
+        </div>
+        <div class="col-sm-2">
+        <label class="ml-2 col-form-label"></label>
+        </div>
+     </div>
+
+     <div class="form-group row">
+      <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">Pipe material:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.pipeMaterial}}</label>
+      </div>
+
+      <div class="col-sm-2">
+      <label  class="col-form-label"></label>
+      </div>
+
+      
+      <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">Length of pipe:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.lengthOfPipe}}</label>
+      </div>
+      <div class="col-sm-2">
+      <label class="ml-2 col-form-label"></label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2">
+      <label class="col-sm-auto col-form-label">No. of surge raiser:</label>
+      </div>
+      <div class="col-sm-2">
+        <label class="col-sm-auto col-form-label">{{groundwaters.noOfSurgeRaiser}}</label>
+      </div>
+
+      <div class="col-sm-2">
+      <label  class="col-form-label"></label>
+      </div>
+    </div>
+
+    </fieldset>
+
+    <br>
+
+    
+
+    <!-- End of Distribution system -->
+
+    
+
+    
+</fieldset>
+</div>
+
+</div>
+<div>
+    <button class="btn btn-info ml-2 mr-4" (click)="captureScreen()" >Print</button>
+      <a [routerLink]="['groundwater-edit/', groundwaters.id]"><button class="btn btn-info ml-2 mr-4" type="edit" >Edit</button> </a>
+    </div>
